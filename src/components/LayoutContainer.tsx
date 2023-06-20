@@ -1,9 +1,9 @@
-import { DHLayout, useDHConnect } from "@daohaus/connect";
-import { TXBuilder } from "@daohaus/tx-builder";
-import { H4 } from "@daohaus/ui";
-import { Outlet, useLocation, useParams } from "react-router-dom";
-import { TARGET_DAO } from "../targetDao";
-import { CurrentDaoProvider, useDaoData } from "@daohaus/moloch-v3-hooks";
+import { DHLayout, useDHConnect } from '@daohaus/connect';
+import { TXBuilder } from '@daohaus/tx-builder';
+import { H1 } from '@daohaus/ui';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { TARGET_DAO } from '../targetDao';
+import { CurrentDaoProvider, useDaoData } from '@daohaus/moloch-v3-hooks';
 
 const routePath = `molochv3/${
   TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID
@@ -25,14 +25,14 @@ export const LayoutContainer = () => {
     <DHLayout
       pathname={location.pathname}
       navLinks={[
-        { label: "Home", href: `/` },
-        { label: "DAO Overview", href: `${routePath}/dao` },
-        { label: "Safes", href: `${routePath}/safes` },
-        { label: "Proposals", href: `${routePath}/proposals` },
-        { label: "Members", href: `${routePath}/members` },
-        { label: "Settings", href: `${routePath}/settings` },
+        { label: 'Home', href: `/` },
+        { label: 'Name', href: `${routePath}/name` },
+        { label: 'Tokens', href: `${routePath}/tokens` },
+        { label: 'Members', href: `${routePath}/members` },
+        { label: 'Review', href: `${routePath}/review` },
+        { label: 'Success', href: `${routePath}/success` },
       ]}
-      leftNav={<H4>{dao?.name}</H4>}
+      leftNav={<H1>Invoke</H1>}
     >
       <CurrentDaoProvider
         targetDao={{
