@@ -1,4 +1,4 @@
-import { ValidNetwork } from "@daohaus/keychain-utils";
+import { ValidNetwork } from '@daohaus/keychain-utils';
 
 export const TARGET_DAO: {
   [key: string]: {
@@ -7,14 +7,9 @@ export const TARGET_DAO: {
     CHAIN_ID: ValidNetwork;
   };
 } = {
-  "0xf6538c07324f59b3ba685d86393c65dce9676c70": {
-    ADDRESS: "0xf6538c07324f59b3ba685d86393c65dce9676c70",
-    SAFE_ADDRESS: "0xb64b12c4e68310fc222580dea1c86d202310f343",
-    CHAIN_ID: "0x5",
-  },
-  "0xf844b98df9ccdfbe5d460d0d7bdca232cf9da923": {
-    ADDRESS: "0xf844b98df9ccdfbe5d460d0d7bdca232cf9da923",
-    SAFE_ADDRESS: "0xeb0dc703b854791914f30b5a73dd04d8d22a9aff",
-    CHAIN_ID: "0x1",
+  '0xe2f816d08c568a447d3804b265f1e277bc2c688d': {
+    ADDRESS: '0xe2f816d08c568a447d3804b265f1e277bc2c688d',
+    SAFE_ADDRESS: '0x44325ffce4f99b5cc87c0f29cb3e7ac0f8d77a82',
+    CHAIN_ID: '0x64',
   },
 };
