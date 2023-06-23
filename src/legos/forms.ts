@@ -1,4 +1,3 @@
-import { FormLego } from "@daohaus/form-builder";
 import { FIELD } from "@daohaus/moloch-v3-legos";
 import { CustomFormLego } from "./fieldConfig";
 import { APP_FIELD } from "./fields";
@@ -22,5 +21,14 @@ export const APP_FORM: Record<string, CustomFormLego> = {
       APP_FIELD.TEST_FIELD,
       ...PROPOSAL_SETTINGS_FIELDS,
     ],
+  },
+  NAME: {
+    id: "NAME",
+    // title: "Signal Form",
+    // subtitle: "Signal Proposal",
+    // description: "Ratify on-chain using a DAO proposal.",
+    requiredFields: { name: true },
+    log: true,
+    fields: [{ ...FIELD.TITLE, id: "name", label: "Name" }],
   },
 };

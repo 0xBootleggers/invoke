@@ -21,9 +21,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
       <QueryClientProvider client={queryClient}>
-        <DHConnectProvider
-          daoChainId={TARGET_DAO[import.meta.env.VITE_TARGET_KEY].CHAIN_ID}
-        >
+        <DHConnectProvider daoChainId={import.meta.env.VITE_TARGET_CHAIN}>
           <HausThemeProvider>
             <Routes />
           </HausThemeProvider>
