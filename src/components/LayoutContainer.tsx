@@ -13,10 +13,7 @@ export const LayoutContainer = () => {
   return (
     <DHLayout
       pathname={location.pathname}
-      navLinks={[
-        { label: "Home", href: `/` },
-        { label: "Invoke", href: `invoke` },
-      ]}
+      navLinks={[{ label: "Home", href: `/` }]}
       leftNav={<H1>Invoke</H1>}
     >
       <TXBuilder

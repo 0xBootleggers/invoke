@@ -29,7 +29,6 @@ export const Spike = () => {
         form={WIZARD_FORM.INVOKE}
         customFields={AppFieldLookup}
         targetNetwork={import.meta.env.VITE_TARGET_CHAIN}
-        defaultValues={{ votingTokenName: "boots" }}
         lifeCycleFns={{
           onPollSuccess: (result) => {
             onFormComplete(result);
