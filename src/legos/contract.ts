@@ -13,6 +13,12 @@ export const APP_CONTRACT: Record<string, ContractLego> = {
       "0x64": "0x000000000000cd17345801aa8147b8d3950260ff",
     },
   },
+  V3_FACTORY_ADV_TOKEN: {
+    type: "static",
+    contractName: "V3_FACTORY_ADV_TOKEN",
+    targetAddress: CONTRACT_KEYCHAINS.V3_FACTORY_ADV_TOKEN,
+    abi: LOCAL_ABI.BAAL_ADV_TOKEN_SUMMONER,
+  },
   ERC_20: {
     type: "static",
     contractName: "ERC20",

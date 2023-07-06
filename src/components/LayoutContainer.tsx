@@ -4,6 +4,7 @@ import { H1 } from "@daohaus/ui";
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import { TARGET_DAO } from "../targetDao";
 import { CurrentDaoProvider, useDaoData } from "@daohaus/moloch-v3-hooks";
+import { assembleSummonArgs } from "../utils/summonTx";
 
 export const LayoutContainer = () => {
   const location = useLocation();
@@ -18,12 +19,7 @@ export const LayoutContainer = () => {
       pathname={location.pathname}
       navLinks={[
         { label: "Home", href: `/` },
-        { label: "Name", href: `name` },
-        { label: "Tokens", href: `tokens` },
-        { label: "Members", href: `members` },
-        { label: "Review", href: `review` },
-        { label: "Success", href: `success` },
-        { label: "Form Spike", href: `spike` },
+        { label: "Invoke", href: `invoke` },
       ]}
       leftNav={<H1>Invoke</H1>}
     >
@@ -41,6 +37,9 @@ export const LayoutContainer = () => {
           // daoId={TARGET_DAO[import.meta.env.VITE_TARGET_KEY].ADDRESS}
           // safeId={TARGET_DAO[import.meta.env.VITE_TARGET_KEY].SAFE_ADDRESS}
           appState={{ connectedAddress: address }}
+          argCallbackRecord={{
+            poopin: assembleSummonArgs,
+          }}
         >
           <Outlet />
         </TXBuilder>

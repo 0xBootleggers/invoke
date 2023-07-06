@@ -19,6 +19,7 @@
     "@daohaus/tx-builder": "^0.1.29",
     "@daohaus/ui": "^0.1.29",
     "@daohaus/utils": "^0.1.29",
+    "ethers": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
