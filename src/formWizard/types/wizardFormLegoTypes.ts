@@ -1,13 +1,14 @@
+import { JSXElementConstructor } from "react";
+import { RegisterOptions } from "react-hook-form";
+
 import {
   FieldLegoBase,
   FormLegoBase,
   LookupType,
   TXLego,
 } from "@daohaus/utils";
-import { CoreFieldLookup } from "../components/CoreFieldLookup";
 
-import { JSXElementConstructor } from "react";
-import { RegisterOptions } from "react-hook-form";
+import { CoreFieldLookup } from "../components/CoreFieldLookup";
 
 export type CoreFields = typeof CoreFieldLookup;
 
@@ -15,8 +16,6 @@ export type FieldLego<Lookup extends LookupType = CoreFields> =
   FieldLegoBase<Lookup>;
 export type FormLego<Lookup extends LookupType = CoreFields> =
   FormLegoBase<Lookup>;
-
-// new
 
 declare type FieldBase = Record<
   string,

@@ -1,5 +1,3 @@
-import { FieldValues } from "react-hook-form";
-
 import { ArbitraryState } from "@daohaus/utils";
 import { ValidNetwork } from "@daohaus/keychain-utils";
 import { assembleTxArgs } from "@daohaus/contract-utils";
@@ -22,15 +20,8 @@ const DEFAULT_ARGS = {
 };
 
 export const assembleSummonArgs = (args: ArbitraryState) => {
-  console.log("whoooo", args);
   const formValues = args.appState.formValues as Record<string, unknown>;
   const chainId = args.chainId as ValidNetwork;
-
-  console.log("{ ...formValues, ...DEFAULT_ARGS }", {
-    ...formValues,
-    ...DEFAULT_ARGS,
-  });
-
   const txArgs = assembleTxArgs({ ...formValues, ...DEFAULT_ARGS }, chainId);
 
   console.log("txArgs", txArgs);

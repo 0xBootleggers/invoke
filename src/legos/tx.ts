@@ -21,7 +21,7 @@ export const APP_TX = {
     id: "INVOKE",
     contract: APP_CONTRACT.V3_FACTORY_ADV_TOKEN,
     method: "summonBaalFromReferrer",
-    argCallback: "poopin",
+    argCallback: "summonArgs",
   },
   POST_SIGNAL: buildMultiCallTX({
     id: "POST_SIGNAL",

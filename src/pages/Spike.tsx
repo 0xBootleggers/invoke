@@ -1,20 +1,12 @@
-import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
-import { FormLayout, useToast } from "@daohaus/ui";
-import { ArbitraryState } from "@daohaus/utils";
+import { FormLayout } from "@daohaus/ui";
 
 import { WizardFormBuilder } from "../formWizard";
 import { AppFieldLookup } from "../legos/fieldConfig";
-import { APP_FORM, WIZARD_FORM } from "../legos/forms";
+import { WIZARD_FORM } from "../legos/forms";
 
 export const Spike = () => {
   const navigate = useNavigate();
-  const { errorToast, successToast } = useToast();
-
-  // confirmation page
-
-  // success page
-
   // new member fields
 
   // refine other fields
@@ -28,15 +20,11 @@ export const Spike = () => {
     result: any
   ) => {
     const daoAddress = result?.data?.transaction?.daoAddress;
-    const txHash = result?.data?.transaction?.hash;
-    navigate(`/success/${daoAddress}&tx=${txHash}`);
+    navigate(`/success/${daoAddress}`);
   };
 
   return (
-    <FormLayout
-    // title="Name Your DAO"
-    // description="You are about to create a Moloch DAO, an on-chain organization with native token and voting mechanism. To get started, pick a name for your DAO."
-    >
+    <FormLayout>
       <WizardFormBuilder
         form={WIZARD_FORM.INVOKE}
         customFields={AppFieldLookup}

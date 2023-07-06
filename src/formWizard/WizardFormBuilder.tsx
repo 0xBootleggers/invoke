@@ -1,13 +1,14 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { FieldValues } from "react-hook-form";
 
 import { TXLifeCycleFns, useTxBuilder } from "@daohaus/tx-builder";
-import { FormBuilderBase, FormLego } from "@daohaus/form-builder-base";
-import { Button, FormLayout, H1, H3, ParMd, useToast } from "@daohaus/ui";
+import { FormBuilderBase } from "@daohaus/form-builder-base";
+import { FormLayout, H3, ParMd, useToast } from "@daohaus/ui";
 import { useDHConnect } from "@daohaus/connect";
 import { handleErrorMessage, LookupType } from "@daohaus/utils";
 
-import { CoreFieldLookup, WizardFormLego } from ".";
+import { CoreFieldLookup } from "./components/CoreFieldLookup";
+import { WizardFormLego } from "./types/wizardFormLegoTypes";
 import { FormFooter } from "./components/FormFooter";
 import { Confirmation } from "./components/Confirmation";
 
@@ -60,19 +61,14 @@ export const WizardFormBuilder = ({
   const submitDisabled = isLoading || !isSameNetwork;
 
   const handleConfirm = (formValues: FieldValues) => {
-    console.log("CONFIRM STEP", formValues);
     setConfirmationData(formValues);
     setCurrentStepIndex(currentStepIndex + 1);
-
-    // then need to do this on a real submit
   };
 
   const handleSubmitButton = () => {
     if (!confirmationData) return;
     handleSubmit(confirmationData);
   };
-
-  console.log("isLoading", isLoading);
 
   const handleSubmit = async (formValues: FieldValues) => {
     if (form.tx) {
@@ -201,10 +197,8 @@ export const WizardFormBuilder = ({
           currentStepIndex={currentStepIndex}
           customConfirm={customConfirm}
           handleSubmit={handleSubmitButton}
-          submitButtonText={form.submitButtonText}
-          title={form.confirmTitle}
-          description={form.confirmDescription}
           isLoading={isLoading}
+          form={form}
         />
       )}
     </FormLayout>
