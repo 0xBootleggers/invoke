@@ -1,6 +1,7 @@
 import { POSTER_TAGS } from "@daohaus/utils";
 import { buildMultiCallTX } from "@daohaus/tx-builder";
 import { APP_CONTRACT } from "./contract";
+import { CONTRACT } from "@daohaus/moloch-v3-legos";
 
 export enum ProposalTypeIds {
   Signal = "SIGNAL",
@@ -16,6 +17,12 @@ export enum ProposalTypeIds {
 }
 
 export const APP_TX = {
+  INVOKE: {
+    id: "INVOKE",
+    contract: APP_CONTRACT.V3_FACTORY_ADV_TOKEN,
+    method: "summonBaalFromReferrer",
+    argCallback: "summonArgs",
+  },
   POST_SIGNAL: buildMultiCallTX({
     id: "POST_SIGNAL",
     JSONDetails: {
