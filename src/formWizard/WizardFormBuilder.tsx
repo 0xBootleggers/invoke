@@ -12,6 +12,8 @@ import { WizardFormLego } from "./types/wizardFormLegoTypes";
 import { FormFooter } from "./components/FormFooter";
 import { Confirmation } from "./components/Confirmation";
 
+import { InvokeFormLayout } from "../components/InvokeFormLayout";
+
 type BuilderProps = {
   form: WizardFormLego;
   defaultValues?: FieldValues;
@@ -153,7 +155,11 @@ export const WizardFormBuilder = ({
   const currentStep = form.steps[currentStepIndex];
 
   return (
-    <FormLayout title={title} description={description} subtitle={subtitle}>
+    <InvokeFormLayout
+      title={title}
+      description={description}
+      subtitle={subtitle}
+    >
       {currentStepIndex < form.steps.length && (
         <>
           {currentStep.title && (
@@ -201,6 +207,6 @@ export const WizardFormBuilder = ({
           form={form}
         />
       )}
-    </FormLayout>
+    </InvokeFormLayout>
   );
 };

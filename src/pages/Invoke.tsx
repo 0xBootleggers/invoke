@@ -5,7 +5,7 @@ import { WizardFormBuilder } from "../formWizard";
 import { AppFieldLookup } from "../legos/fieldConfig";
 import { WIZARD_FORM } from "../legos/forms";
 
-export const Spike = () => {
+export const Invoke = () => {
   const navigate = useNavigate();
   // new member fields
 
@@ -24,7 +24,7 @@ export const Spike = () => {
   };
 
   return (
-    <FormLayout>
+    <>
       <WizardFormBuilder
         form={WIZARD_FORM.INVOKE}
         customFields={AppFieldLookup}
@@ -34,10 +34,11 @@ export const Spike = () => {
             onFormComplete(result);
           },
         }}
+
         // customConfirm={() => {
         //   return <p>poooooo</p>;
         // }}
       />
-    </FormLayout>
+    </>
   );
 };
