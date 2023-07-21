@@ -1,12 +1,12 @@
 import { MolochFields } from "@daohaus/moloch-v3-fields";
 import { FieldLegoBase, FormLegoBase } from "@daohaus/utils";
 
-import { TestField } from "../components/customFields/fieldTest";
+import { SummonersField } from "../components/customFields/SummonersField";
 import { WizardFormLegoBase } from "../formWizard";
 
 export const AppFieldLookup = {
   ...MolochFields,
-  testField: TestField,
+  summonersField: SummonersField,
 };
 
 export type CustomFieldLego = FieldLegoBase<typeof AppFieldLookup>;
