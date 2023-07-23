@@ -3,10 +3,16 @@ import styled from "styled-components";
 import { RiCloseLine } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
 
-import { RegisterOptions, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 import { Buildable, WrappedInput, Field, Input, Button } from "@daohaus/ui";
 import { ValidateField } from "@daohaus/utils";
+import {
+  SUMMONER_FIELD_LOOT,
+  SUMMONER_FIELD_MEMBER,
+  SUMMONER_FIELD_PREFIX,
+  SUMMONER_FIELD_SHARES,
+} from "../../utils/summonTx";
 
 const RowWrapper = styled.div`
   display: flex;
@@ -32,61 +38,28 @@ const RowWrapper = styled.div`
   }
 `;
 
-export const validateMemberData = (
-  memberData: Record<string, string[]> | ""
-) => {
-  console.log("memberData", memberData);
-
-  return true;
-};
-
-export const validateEthAddress = (val: Record<string, string[]> | "") => {
-  console.log("val", val);
-
-  // return true;
-
-  return "WRONG";
-};
-
 export const SummonersField = (props: Buildable<Field>) => {
-  // either put into members on each watch or validate in the boig list and format in the tx arg handler
-  // - validating here allows for error messaging
-  // members: {
-  //   memberAddresses: ["0x83aB8e31df35AA3281d630529C6F4bf5AC7f7aBF"],
-  //   memberShares: ["10"],
-  //   memberLoot: ["1"],
-  // },
-  const { id } = props;
+  const { unregister } = useFormContext();
 
-  const { watch, getValues, setValue, register, unregister } = useFormContext();
+  // TODO: need to handle coming back on a previous button
+  // will need to useEffect and look at formvalues to see if we have summoner set and then fill in rows based on that
+  // or not use rows and only formValues somehow
 
   const [rows, setRows] = useState<string[]>([uuidv4().substring(0, 8)]);
-  // const multipleSharesField = watch("addressesAndAmounts");
-
-  const newRules: RegisterOptions = {
-    ...props.rules,
-    // setValueAs: transformAddressesAndAmountsData,
-    validate: validateMemberData,
-  };
-
-  // watch((data, { name, type }) => console.log(data, name, type));
 
   const handleAdd = () => {
-    console.log("rows");
     setRows((prevState) => {
       return [...prevState, uuidv4().substring(0, 8)];
     });
   };
 
   const handleRemove = async (slotNumber: string) => {
-    // TODO: deal with removing the correct data from members object
-
     console.log("removing slotNumber", slotNumber);
 
     unregister([
-      `memberAddress-${slotNumber}`,
-      `voting-${slotNumber}`,
-      `nonVoting-${slotNumber}`,
+      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_MEMBER}-${slotNumber}`,
+      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_SHARES}-${slotNumber}`,
+      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_LOOT}-${slotNumber}`,
     ]);
 
     await setRows((prevState) => {
@@ -103,21 +76,21 @@ export const SummonersField = (props: Buildable<Field>) => {
             <WrappedInput
               {...props}
               label="Member"
-              id={`memberAddress-${slotNumber}`}
+              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_MEMBER}-${slotNumber}`}
               placeholder="0x666..."
               rules={{ validate: ValidateField.ethAddress, required: true }}
             />
             <WrappedInput
               {...props}
               label="Voting"
-              id={`voting-${slotNumber}`}
+              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_SHARES}-${slotNumber}`}
               rules={{ validate: ValidateField.number, required: true }}
               defaultValue="0"
             />
             <WrappedInput
               {...props}
               label="Non-Voting"
-              id={`nonVoting-${slotNumber}`}
+              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_LOOT}-${slotNumber}`}
               rules={{ validate: ValidateField.number, required: true }}
               defaultValue="0"
             />

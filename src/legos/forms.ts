@@ -41,18 +41,6 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
     submitButtonText: "Deploy",
     steps: [
       {
-        title: "Co-Summoners",
-        description:
-          "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
-        fields: [
-          {
-            type: "summonersField",
-            id: "members",
-          },
-        ],
-        requiredFields: { daoName: true },
-      },
-      {
         title: "Summon",
         description:
           "You are about to summon a Moloch DAO, an on-chain organization with a native token and voting mechanism. To get started, pick a name for your DAO.  ",
@@ -62,6 +50,12 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
             id: "daoName",
             label: "DAO",
             placeholder: "Name of Your DAO",
+          },
+          {
+            type: "input",
+            id: "members.poopin",
+            label: "POO",
+            placeholder: "Name of Your POO",
           },
         ],
         requiredFields: { daoName: true },
@@ -120,6 +114,17 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
           lootTokenName: true,
           lootTokenSymbol: true,
         },
+      },
+      {
+        title: "Co-Summoners",
+        description:
+          "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
+        fields: [
+          {
+            type: "summonersField",
+            id: "members",
+          },
+        ],
       },
     ],
   },

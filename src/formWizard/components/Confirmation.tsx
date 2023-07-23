@@ -33,6 +33,10 @@ const ConfirmationSection = ({
   formValues: FieldValues;
 }) => {
   // TODO: handle non strings (array for members)
+  if (step.title === "Co-Summoners") {
+    return <p>implement for complex field types</p>;
+  }
+
   return (
     <>
       {step.fields.map((field: WizardFormLego["steps"][0]["fields"][0]) => {
