@@ -51,12 +51,6 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
             label: "DAO",
             placeholder: "Name of Your DAO",
           },
-          {
-            type: "input",
-            id: "members.poopin",
-            label: "POO",
-            placeholder: "Name of Your POO",
-          },
         ],
         requiredFields: { daoName: true },
       },

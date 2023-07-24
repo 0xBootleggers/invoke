@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { RiCloseLine } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
@@ -10,7 +10,6 @@ import { ValidateField } from "@daohaus/utils";
 import {
   SUMMONER_FIELD_LOOT,
   SUMMONER_FIELD_MEMBER,
-  SUMMONER_FIELD_PREFIX,
   SUMMONER_FIELD_SHARES,
 } from "../../utils/summonTx";
 
@@ -39,13 +38,20 @@ const RowWrapper = styled.div`
 `;
 
 export const SummonersField = (props: Buildable<Field>) => {
-  const { unregister } = useFormContext();
+  const { unregister, getValues } = useFormContext();
 
-  // TODO: need to handle coming back on a previous button
-  // will need to useEffect and look at formvalues to see if we have summoner set and then fill in rows based on that
-  // or not use rows and only formValues somehow
+  const [rows, setRows] = useState<string[]>([]);
 
-  const [rows, setRows] = useState<string[]>([uuidv4().substring(0, 8)]);
+  useEffect(() => {
+    const members = getValues("members");
+
+    if (!members) {
+      setRows([uuidv4().substring(0, 8)]);
+    } else {
+      console.log("useEffect members", members);
+      setRows([...Object.keys(members)]);
+    }
+  }, []);
 
   const handleAdd = () => {
     setRows((prevState) => {
@@ -57,9 +63,9 @@ export const SummonersField = (props: Buildable<Field>) => {
     console.log("removing slotNumber", slotNumber);
 
     unregister([
-      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_MEMBER}-${slotNumber}`,
-      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_SHARES}-${slotNumber}`,
-      `${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_LOOT}-${slotNumber}`,
+      `members.${slotNumber}.${SUMMONER_FIELD_MEMBER}`,
+      `members.${slotNumber}.${SUMMONER_FIELD_SHARES}`,
+      `members.${slotNumber}.${SUMMONER_FIELD_LOOT}`,
     ]);
 
     await setRows((prevState) => {
@@ -76,21 +82,21 @@ export const SummonersField = (props: Buildable<Field>) => {
             <WrappedInput
               {...props}
               label="Member"
-              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_MEMBER}-${slotNumber}`}
+              id={`members.${slotNumber}.${SUMMONER_FIELD_MEMBER}`}
               placeholder="0x666..."
               rules={{ validate: ValidateField.ethAddress, required: true }}
             />
             <WrappedInput
               {...props}
               label="Voting"
-              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_SHARES}-${slotNumber}`}
+              id={`members.${slotNumber}.${SUMMONER_FIELD_SHARES}`}
               rules={{ validate: ValidateField.number, required: true }}
               defaultValue="0"
             />
             <WrappedInput
               {...props}
               label="Non-Voting"
-              id={`${SUMMONER_FIELD_PREFIX}-${SUMMONER_FIELD_LOOT}-${slotNumber}`}
+              id={`members.${slotNumber}.${SUMMONER_FIELD_LOOT}`}
               rules={{ validate: ValidateField.number, required: true }}
               defaultValue="0"
             />
