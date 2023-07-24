@@ -109,6 +109,17 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
           lootTokenSymbol: true,
         },
       },
+      {
+        title: "Co-Summoners",
+        description:
+          "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
+        fields: [
+          {
+            type: "summonersField",
+            id: "members",
+          },
+        ],
+      },
     ],
   },
 };

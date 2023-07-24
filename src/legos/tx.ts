@@ -1,7 +1,6 @@
 import { POSTER_TAGS } from "@daohaus/utils";
 import { buildMultiCallTX } from "@daohaus/tx-builder";
 import { APP_CONTRACT } from "./contract";
-import { CONTRACT } from "@daohaus/moloch-v3-legos";
 
 export enum ProposalTypeIds {
   Signal = "SIGNAL",
