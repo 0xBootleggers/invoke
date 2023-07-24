@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { Button, H2, SingleColumnLayout } from "@daohaus/ui";
 import { RouterLinkButton } from "../components/Layout";
-import styled from "styled-components";
 
 const ButtonLinks = styled.div`
   display: flex;
