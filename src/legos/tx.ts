@@ -16,6 +16,12 @@ export enum ProposalTypeIds {
 }
 
 export const APP_TX = {
+  INVOKE: {
+    id: "INVOKE",
+    contract: APP_CONTRACT.V3_FACTORY_ADV_TOKEN,
+    method: "summonBaalFromReferrer",
+    argCallback: "summonArgs",
+  },
   POST_SIGNAL: buildMultiCallTX({
     id: "POST_SIGNAL",
     JSONDetails: {
