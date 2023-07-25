@@ -83,7 +83,7 @@ export const SummonersField = (props: Buildable<Field>) => {
               {...props}
               label="Member"
               id={`members.${slotNumber}.${SUMMONER_FIELD_MEMBER}`}
-              placeholder="0x666..."
+              placeholder="0x..."
               rules={{ validate: ValidateField.ethAddress, required: true }}
             />
             <WrappedInput
@@ -91,14 +91,14 @@ export const SummonersField = (props: Buildable<Field>) => {
               label="Voting"
               id={`members.${slotNumber}.${SUMMONER_FIELD_SHARES}`}
               rules={{ validate: ValidateField.number, required: true }}
-              defaultValue="0"
+              placeholder="0"
             />
             <WrappedInput
               {...props}
               label="Non-Voting"
               id={`members.${slotNumber}.${SUMMONER_FIELD_LOOT}`}
               rules={{ validate: ValidateField.number, required: true }}
-              defaultValue="0"
+              placeholder="0"
             />
             {rows.length > 1 && (
               <Button onClick={() => handleRemove(slotNumber)} variant="ghost">
