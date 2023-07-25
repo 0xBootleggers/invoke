@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import { useFormContext } from "react-hook-form";
 
-import { Buildable, WrappedInput, Field, Input, Button } from "@daohaus/ui";
+import { Buildable, WrappedInput, Field, Button } from "@daohaus/ui";
 import { ValidateField } from "@daohaus/utils";
 import {
   SUMMONER_FIELD_LOOT,
@@ -41,6 +41,9 @@ export const SummonersField = (props: Buildable<Field>) => {
   const { unregister, getValues } = useFormContext();
 
   const [rows, setRows] = useState<string[]>([]);
+
+  const votingLabel = getValues("tokenSymbol");
+  const nonVotingLabel = getValues("lootTokenSymbol");
 
   useEffect(() => {
     const members = getValues("members");
@@ -88,14 +91,14 @@ export const SummonersField = (props: Buildable<Field>) => {
             />
             <WrappedInput
               {...props}
-              label="Voting"
+              label={votingLabel}
               id={`members.${slotNumber}.${SUMMONER_FIELD_SHARES}`}
               rules={{ validate: ValidateField.number, required: true }}
               placeholder="0"
             />
             <WrappedInput
               {...props}
-              label="Non-Voting"
+              label={nonVotingLabel}
               id={`members.${slotNumber}.${SUMMONER_FIELD_LOOT}`}
               rules={{ validate: ValidateField.number, required: true }}
               placeholder="0"
