@@ -50,6 +50,12 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
             id: "daoName",
             label: "DAO",
             placeholder: "Name of Your DAO",
+            rules: {
+              maxLength: {
+                value: 128,
+                message: "DAO name must be 128 characters or less",
+              },
+            },
           },
         ],
         requiredFields: { daoName: true },
@@ -70,12 +76,25 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
                   type: "input",
                   label: "Voting Token Name",
                   placeholder: "Token Name",
+                  rules: {
+                    maxLength: {
+                      value: 50,
+                      message: "Token name cannot be longer than 50 characters",
+                    },
+                  },
                 },
                 right: {
                   id: "tokenSymbol",
                   type: "input",
                   label: "Voting Token Symbol",
                   placeholder: "vTKN",
+                  rules: {
+                    maxLength: {
+                      value: 5,
+                      message:
+                        "Token symbol cannot be longer than 5 characters",
+                    },
+                  },
                 },
               },
             ],
@@ -91,12 +110,25 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
                   type: "input",
                   label: "Non-Voting Token Name",
                   placeholder: "Token Name",
+                  rules: {
+                    maxLength: {
+                      value: 50,
+                      message: "Token name cannot be longer than 50 characters",
+                    },
+                  },
                 },
                 right: {
                   id: "lootTokenSymbol",
                   type: "input",
                   label: "Non-Voting Token Symbol",
                   placeholder: "nvTKN",
+                  rules: {
+                    maxLength: {
+                      value: 5,
+                      message:
+                        "Token symbol cannot be longer than 5 characters",
+                    },
+                  },
                 },
               },
             ],

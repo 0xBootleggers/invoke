@@ -13,3 +13,12 @@ export const RouterLinkButton = styled(RouterLink)`
     text-decoration: none;
   }
 `;
+
+export const UnstyledUiLink = styled(Link)`
+  text-decoration: none;
+  color: unset;
+  font-weight: unset;
+  :hover {
+    text-decoration: none;
+  }
+`;
