@@ -24,7 +24,7 @@ export const Home = () => {
     <SingleColumnLayout>
       <H2>A purpose-driven governance stack for your Arbitrum community.</H2>
       <ButtonLinks>
-        <Button>
+        <Button variant="outline">
           <RouterLinkButton to="/invoke">Create</RouterLinkButton>
         </Button>
         <Button color="secondary">

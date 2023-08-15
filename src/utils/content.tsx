@@ -1,11 +1,11 @@
-import { Link } from "@daohaus/ui";
+import { DataSm, Link } from "@daohaus/ui";
 
 export const FaqContent = [
   {
     title: "What is a DAO?",
     content: (
       <div>
-        Some content here. and can have{" "}
+        <DataSm>Some content here. and can have </DataSm>
         <Link href="https://docs.daohaus.club/">links</Link>
       </div>
     ),
@@ -14,7 +14,7 @@ export const FaqContent = [
     title: "What is a Moloch DAO?",
     content: (
       <div>
-        Some content here. and can have{" "}
+        <DataSm>Some content here. and can have </DataSm>
         <Link href="https://docs.daohaus.club/">links</Link>
       </div>
     ),
@@ -23,7 +23,7 @@ export const FaqContent = [
     title: "Where's the beef?",
     content: (
       <div>
-        Some content here. and can have{" "}
+        <DataSm>Some content here. and can have </DataSm>
         <Link href="https://docs.daohaus.club/">links</Link>
       </div>
     ),

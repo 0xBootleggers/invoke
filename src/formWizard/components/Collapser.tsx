@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import styled from "styled-components";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri/index.js";
 
-import { Card, H5 } from "@daohaus/ui";
+import { Card, DataXl, H5 } from "@daohaus/ui";
 
 export const CollapseContainer = styled(Card)`
   border: none;
@@ -13,19 +13,20 @@ export const CollapseContainer = styled(Card)`
 export const StyledUpArrow = styled(RiArrowUpSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: any }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.collapser.iconColor};
 `;
 
 export const StyledDownArrow = styled(RiArrowDownSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: any }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.collapser.iconColor};
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 900;
 `;
 
 type CollapserProps = {
@@ -43,7 +44,7 @@ export const Collapser = ({ title, content }: CollapserProps) => {
   return (
     <CollapseContainer>
       <TitleContainer>
-        {title && <H5> {title}</H5>}
+        {title && <DataXl> {title}</DataXl>}
 
         {open && (
           <div onClick={handleToggle}>
