@@ -9,7 +9,7 @@ export const StyledRouterLink = styled(RouterLink)`
 export const RouterLinkButton = styled(RouterLink)`
   text-decoration: none;
   color: unset;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;
@@ -18,7 +18,7 @@ export const UnstyledUiLink = styled(Link)`
   text-decoration: none;
   color: unset;
   font-weight: unset;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;

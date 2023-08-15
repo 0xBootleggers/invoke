@@ -12,7 +12,7 @@ const ButtonContainer = styled.div`
 const LinkButton = styled(Link)`
   text-decoration: none;
   color: unset;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;

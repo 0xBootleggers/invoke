@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import styled from "styled-components";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri/index.js";
 
-import { Card, H5, Theme } from "@daohaus/ui";
+import { Card, H5 } from "@daohaus/ui";
 
 export const CollapseContainer = styled(Card)`
   border: none;
@@ -13,13 +13,13 @@ export const CollapseContainer = styled(Card)`
 export const StyledUpArrow = styled(RiArrowUpSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: Theme }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.primary.step10};
 `;
 
 export const StyledDownArrow = styled(RiArrowDownSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: Theme }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.primary.step10};
 `;
 
 export const TitleContainer = styled.div`

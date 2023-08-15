@@ -8,7 +8,7 @@ import { assembleSummonArgs } from "../utils/summonTx";
 
 export const LayoutContainer = () => {
   const location = useLocation();
-  const { provider, address } = useDHConnect();
+  const { publicClient, address } = useDHConnect();
 
   return (
     <DHLayout
@@ -17,7 +17,7 @@ export const LayoutContainer = () => {
       leftNav={<H1>Invoke</H1>}
     >
       <TXBuilder
-        provider={provider}
+        publicClient={publicClient}
         chainId={import.meta.env.VITE_TARGET_CHAIN}
         appState={{ connectedAddress: address }}
         argCallbackRecord={{
