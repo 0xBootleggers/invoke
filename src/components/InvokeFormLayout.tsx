@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const FormContainer = styled.div`
   width: 78rem;
-  margin-top: 5rem;
 
   .subtitle {
     margin-bottom: 1.2rem;

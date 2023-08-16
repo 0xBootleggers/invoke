@@ -3,7 +3,7 @@ import { FieldValues } from "react-hook-form";
 
 import { TXLifeCycleFns, useTxBuilder } from "@daohaus/tx-builder";
 import { FormBuilderBase } from "@daohaus/form-builder-base";
-import { FormLayout, H3, ParMd, useToast } from "@daohaus/ui";
+import { DataMd, DataSm, FormLayout, H3, ParMd, useToast } from "@daohaus/ui";
 import { useDHConnect } from "@daohaus/connect";
 import { handleErrorMessage, LookupType } from "@daohaus/utils";
 
@@ -166,9 +166,9 @@ export const WizardFormBuilder = ({
             <H3 style={{ marginBottom: "2rem" }}>{currentStep.title}</H3>
           )}
           {currentStep.description && (
-            <ParMd style={{ marginBottom: "2rem" }}>
+            <DataSm style={{ marginBottom: "2rem" }}>
               {currentStep.description}
-            </ParMd>
+            </DataSm>
           )}
           <FormBuilderBase
             form={{

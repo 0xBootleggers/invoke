@@ -1,31 +1,50 @@
-import { Outlet, useLocation } from "react-router-dom";
-
-import { DHLayout, useDHConnect } from "@daohaus/connect";
+import { Outlet } from "react-router-dom";
+import { styled } from "styled-components";
+import { DaoHausNav, useDHConnect } from "@daohaus/connect";
 import { TXBuilder } from "@daohaus/tx-builder";
-import { H1 } from "@daohaus/ui";
+import { H5, MainLayout, OuterLayout, widthQuery } from "@daohaus/ui";
 
 import { assembleSummonArgs } from "../utils/summonTx";
 
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.6rem 3rem;
+  width: 100%;
+  @media ${widthQuery.sm} {
+    padding: 2rem;
+  }
+  .left-nav {
+    @media ${widthQuery.sm} {
+      width: 100%;
+    }
+  }
+`;
+
 export const LayoutContainer = () => {
-  const location = useLocation();
-  const { provider, address } = useDHConnect();
+  const { publicClient, address } = useDHConnect();
 
   return (
-    <DHLayout
-      pathname={location.pathname}
-      navLinks={[{ label: "Home", href: `/` }]}
-      leftNav={<H1>Invoke</H1>}
+    <TXBuilder
+      publicClient={publicClient}
+      chainId={import.meta.env.VITE_TARGET_CHAIN}
+      appState={{ connectedAddress: address }}
+      argCallbackRecord={{
+        summonArgs: assembleSummonArgs,
+      }}
     >
-      <TXBuilder
-        provider={provider}
-        chainId={import.meta.env.VITE_TARGET_CHAIN}
-        appState={{ connectedAddress: address }}
-        argCallbackRecord={{
-          summonArgs: assembleSummonArgs,
-        }}
-      >
-        <Outlet />
-      </TXBuilder>
-    </DHLayout>
+      <OuterLayout>
+        <Header>
+          <div className="left-nav">{<H5>Invoke</H5>}</div>
+          <DaoHausNav />
+        </Header>
+
+        <MainLayout>
+          <Outlet />
+        </MainLayout>
+        {/* {footer here} */}
+      </OuterLayout>
+    </TXBuilder>
   );
 };

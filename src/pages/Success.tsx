@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 
-import { Button, FormLayout, Link } from "@daohaus/ui";
+import { Button, DataSm, H3, Link } from "@daohaus/ui";
+import { InvokeContainer } from "../components/Layout";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const ButtonContainer = styled.div`
 const LinkButton = styled(Link)`
   text-decoration: none;
   color: unset;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;
@@ -21,10 +22,13 @@ export const Success = () => {
   const { daoId } = useParams();
 
   return (
-    <FormLayout
-      title="Your DAO is Live"
-      description="You have successfully summoned your DAO! So now you’re probably wondering what to do next."
-    >
+    <InvokeContainer>
+      <H3 style={{ marginBottom: "3rem" }}>Your DAO is live! 🎉</H3>
+      <DataSm style={{ marginBottom: "3rem" }}>
+        You have successfully summoned your DAO! So now you’re probably
+        wondering what to do next.
+      </DataSm>
+
       <ButtonContainer>
         <Button fullWidth>
           <LinkButton
@@ -53,7 +57,7 @@ export const Success = () => {
           </LinkButton>
         </Button>
       </ButtonContainer>
-    </FormLayout>
+    </InvokeContainer>
   );
 };
 
