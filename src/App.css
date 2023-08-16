@@ -4,3 +4,13 @@
 #root {
   margin: 0 auto;
 }
+
+html {
+  background: url("assets/bg-1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(206, 27%, 38%);
+  background-blend-mode: multiply;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

@@ -56,7 +56,7 @@ export const invokeDarkBtn: ButtonTheme = {
 
 export const invokeTheme: ThemeOverrides = {
   themeName: "invoke",
-  rootBgColor: grayDark.step1,
+  rootBgColor: "rgba(0,0,0,0.5)",
   rootFontColor: grayDark.step12,
   border: {
     radius: "1px",

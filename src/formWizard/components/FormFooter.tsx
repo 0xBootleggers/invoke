@@ -108,7 +108,7 @@ const getStatusElement = (status: StatusMsg, theme: Theme) => {
     status === StatusMsg.NoContext
   ) {
     return <RiErrorWarningLine color={theme.danger.step9} size="2.25rem" />;
-  } else return <Loading size={2.25} strokeWidth=".25rem" />;
+  } else return <Loading size={2.25} />;
 };
 
 const StatusBox = styled.div<{ status: StatusMsg }>`
