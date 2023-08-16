@@ -6,11 +6,9 @@
 }
 
 html {
-  background: url("assets/bg-1.gif");
-  background-repeat: no-repeat;
+  font-size: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),
+    url("assets/bg-1.gif");
   background-size: cover;
-  background-color: hsl(206, 27%, 38%);
-  background-blend-mode: multiply;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+  background-blend-mode: saturation;
 }

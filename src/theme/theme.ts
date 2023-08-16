@@ -4,6 +4,7 @@ import {
   dangerDarkBtn,
   successDarkBtn,
   warningDarkBtn,
+  defaultDarkTheme,
 } from "@daohaus/ui";
 
 export const grayDark = {
@@ -101,5 +102,43 @@ export const invokeTheme: ThemeOverrides = {
     bg: grayDark.step4,
     border: grayDark.step4,
     radius: "0rem",
+  },
+  input: {
+    ...defaultDarkTheme.input,
+    border: grayDark.step3,
+    bg: grayDark.step3,
+    hover: {
+      bg: grayDark.step4,
+      border: grayDark.step4,
+    },
+
+    // color: secondaryDark.step12,
+    // placeholder: secondaryDark.step11,
+    // hover: {
+    //   bg: secondaryDark.step4,
+    //   border: secondaryDark.step4,
+    // },
+    // focus: {
+    //   bg: secondaryDark.step3,
+    //   border: secondaryDark.step6,
+    // },
+    // disabled: {
+    //   bg: neutralDark.step5,
+    //   border: neutralDark.step5,
+    //   color: neutralDark.step10,
+    //   placeholder: neutralDark.step10,
+    // },
+    // success: {
+    //   border: successDark.step9,
+    // },
+    // warning: {
+    //   border: warningDark.step9,
+    // },
+    // error: {
+    //   border: dangerDark.step9,
+    // },
+    // icon: {
+    //   color: secondaryDark.step11,
+    // },
   },
 };

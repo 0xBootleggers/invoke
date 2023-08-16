@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import { FieldValues } from "react-hook-form";
 import styled from "styled-components";
 
-import { Button, H3, ParLg, ParMd } from "@daohaus/ui";
+import { Button, DataMd, H3, ParLg } from "@daohaus/ui";
 import { useFormBuilder } from "@daohaus/form-builder-base";
 
 import { WizardFormLego } from "../types";
@@ -23,6 +23,10 @@ const DataRow = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 2rem 0 2rem;
+`;
+
+const ConfirmTitle = styled.div`
+  margin-bottom: 3rem;
 `;
 
 const ConfirmationSection = ({
@@ -50,12 +54,12 @@ const ConfirmationSection = ({
             return (
               <>
                 <DataRow key={row.left.id}>
-                  <ParLg>{row.left.label}</ParLg>
-                  <ParLg>{formValues[row.left.id]}</ParLg>
+                  <DataMd>{row.left.label}</DataMd>
+                  <DataMd>{formValues[row.left.id]}</DataMd>
                 </DataRow>
                 <DataRow key={row.right.id}>
-                  <ParLg>{row.right.label}</ParLg>
-                  <ParLg>{formValues[row.right.id]}</ParLg>
+                  <DataMd>{row.right.label}</DataMd>
+                  <DataMd>{formValues[row.right.id]}</DataMd>
                 </DataRow>
               </>
             );
@@ -64,8 +68,8 @@ const ConfirmationSection = ({
 
         return (
           <DataRow key={field.id}>
-            <ParLg>{field.label}</ParLg>
-            <ParLg>{formValues[field.id]}</ParLg>
+            <DataMd>{field.label}</DataMd>
+            <DataMd>{formValues[field.id]}</DataMd>
           </DataRow>
         );
       })}
@@ -104,8 +108,15 @@ export const Confirmation = ({
 
       {!customConfirm && (
         <>
-          {form.confirmTitle || <H3>Confirm</H3>}
-          {form.confirmDescription && <ParMd>{form.confirmDescription}</ParMd>}
+          {
+            <ConfirmTitle>
+              {form.confirmTitle && <H3>{form.confirmTitle}</H3>}
+              {!form.confirmTitle && <H3>Confirm</H3>}
+            </ConfirmTitle>
+          }
+          {form.confirmDescription && (
+            <DataMd>{form.confirmDescription}</DataMd>
+          )}
           {form.steps.map((step) => {
             return (
               <Collapser

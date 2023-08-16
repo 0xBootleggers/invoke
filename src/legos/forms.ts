@@ -39,6 +39,9 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
     tx: APP_TX.INVOKE,
     log: true,
     submitButtonText: "Deploy",
+    confirmTitle: "Checkout",
+    confirmDescription:
+      "Please review these settings as they cannot be changed later. Governance settings will be configurable in Advanced Settings after summoning.",
     steps: [
       {
         title: "Summon",

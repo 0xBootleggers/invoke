@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
 import { DaoHausNav, useDHConnect } from "@daohaus/connect";
 import { TXBuilder } from "@daohaus/tx-builder";
-import { H1, MainLayout, OuterLayout, widthQuery } from "@daohaus/ui";
+import { H5, MainLayout, OuterLayout, widthQuery } from "@daohaus/ui";
 
 import { assembleSummonArgs } from "../utils/summonTx";
 
@@ -36,7 +36,7 @@ export const LayoutContainer = () => {
     >
       <OuterLayout>
         <Header>
-          <div className="left-nav">{<H1>Invoke</H1>}</div>
+          <div className="left-nav">{<H5>Invoke</H5>}</div>
           <DaoHausNav />
         </Header>
 

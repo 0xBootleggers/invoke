@@ -22,3 +22,11 @@ export const UnstyledUiLink = styled(Link)`
     text-decoration: none;
   }
 `;
+
+export const InvokeContainer = styled.div`
+  margin-top: 16.3rem;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+`;

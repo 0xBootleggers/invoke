@@ -1,8 +1,24 @@
-import { Button, H2, H4, Link, SingleColumnLayout } from "@daohaus/ui";
+import {
+  Button,
+  H1,
+  H2,
+  H3,
+  H4,
+  Link,
+  SingleColumnLayout,
+  widthQuery,
+} from "@daohaus/ui";
 import { RouterLinkButton, UnstyledUiLink } from "../components/Layout";
 import styled from "styled-components";
 import { FaqContent } from "../utils/content";
 import { Collapser } from "../formWizard";
+
+const BiggerH1 = styled(H1)`
+  font-size: 6.4rem;
+  @media ${widthQuery.sm} {
+    font-size: 4rem;
+  }
+`;
 
 const ButtonLinks = styled.div`
   display: flex;
@@ -11,6 +27,7 @@ const ButtonLinks = styled.div`
   justify-content: flex-start;
   gap: 3em;
   width: 100%;
+  margin-top: 6rem;
 `;
 
 const FaqContainer = styled.div`
@@ -19,10 +36,17 @@ const FaqContainer = styled.div`
   width: 100%;
 `;
 
+const FaqHeader = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
 export const Home = () => {
   return (
     <SingleColumnLayout>
-      <H2>A purpose-driven governance stack for your Arbitrum community.</H2>
+      <BiggerH1>
+        A purpose-driven governance stack for your Arbitrum community.
+      </BiggerH1>
       <ButtonLinks>
         <Button variant="outline">
           <RouterLinkButton to="/invoke">Create</RouterLinkButton>
@@ -38,7 +62,9 @@ export const Home = () => {
       </ButtonLinks>
 
       <FaqContainer>
-        <H4>FAQs</H4>
+        <FaqHeader>
+          <H3>FAQs</H3>
+        </FaqHeader>
         {FaqContent.map((faq) => {
           return (
             <Collapser
