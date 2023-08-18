@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import hausBlockAnimated from '../assets/hausBlockAnimated.svg';
+import React from "react";
+import styled from "styled-components";
+import hausBlockAnimated from "../assets/DH_Logo_rainbow.svg";
 
 const ImageContainer = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   height: 20rem;
@@ -16,7 +16,7 @@ const ImageContainer = styled.div`
   img {
     height: 12rem;
     width: 12rem;
-  }
+  } */
 `;
 
 export const HausAnimated = () => {

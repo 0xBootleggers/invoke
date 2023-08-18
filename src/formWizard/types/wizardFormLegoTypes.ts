@@ -28,6 +28,13 @@ declare type FieldBase = Record<
 >;
 export declare type WizardFormLego = WizardFormLegoBase<FieldBase>;
 
+export type WizardFormStep<Lookup extends LookupType = LookupType> = {
+  title?: string;
+  description?: string;
+  fields: FieldLegoBase<Lookup>[];
+  requiredFields?: Record<string, boolean>;
+};
+
 export declare type WizardFormLegoBase<Lookup extends LookupType = LookupType> =
   {
     id: string;
@@ -36,12 +43,7 @@ export declare type WizardFormLegoBase<Lookup extends LookupType = LookupType> =
     description?: string;
     confirmTitle?: string;
     confirmDescription?: string;
-    steps: {
-      title?: string;
-      description?: string;
-      fields: FieldLegoBase<Lookup>[];
-      requiredFields?: Record<string, boolean>;
-    }[];
+    steps: WizardFormStep<Lookup>[];
     tx?: TXLego;
     log?: boolean;
     devtool?: boolean;

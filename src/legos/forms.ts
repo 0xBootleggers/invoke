@@ -69,70 +69,86 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
           "Choose the name for your voting and non-voting tokens. Your token is the identity of your DAO. The token created will be ERC20 compliant.",
         fields: [
           {
-            id: "voting",
-            type: "splitColumn",
-            rows: [
+            id: "votingSegment",
+            type: "formSegment",
+            title: "Voting Token",
+            fields: [
               {
-                rowId: "row1",
-                left: {
-                  id: "tokenName",
-                  type: "input",
-                  label: "Voting Token Name",
-                  placeholder: "Token Name",
-                  rules: {
-                    maxLength: {
-                      value: 50,
-                      message: "Token name cannot be longer than 50 characters",
+                id: "voting",
+                type: "splitColumn",
+                rows: [
+                  {
+                    rowId: "row1",
+                    left: {
+                      id: "tokenName",
+                      type: "input",
+                      label: "Name",
+                      placeholder: "Token Name",
+                      rules: {
+                        maxLength: {
+                          value: 50,
+                          message:
+                            "Token name cannot be longer than 50 characters",
+                        },
+                      },
+                    },
+                    right: {
+                      id: "tokenSymbol",
+                      type: "input",
+                      label: "Symbol",
+                      placeholder: "vTKN",
+                      rules: {
+                        maxLength: {
+                          value: 5,
+                          message:
+                            "Token symbol cannot be longer than 5 characters",
+                        },
+                      },
                     },
                   },
-                },
-                right: {
-                  id: "tokenSymbol",
-                  type: "input",
-                  label: "Voting Token Symbol",
-                  placeholder: "vTKN",
-                  rules: {
-                    maxLength: {
-                      value: 5,
-                      message:
-                        "Token symbol cannot be longer than 5 characters",
-                    },
-                  },
-                },
+                ],
               },
             ],
           },
           {
-            id: "nonvoting",
-            type: "splitColumn",
-            rows: [
+            id: "noVotingSegment",
+            type: "formSegment",
+            title: "Non-Voting Token",
+            fields: [
               {
-                rowId: "row1",
-                left: {
-                  id: "lootTokenName",
-                  type: "input",
-                  label: "Non-Voting Token Name",
-                  placeholder: "Token Name",
-                  rules: {
-                    maxLength: {
-                      value: 50,
-                      message: "Token name cannot be longer than 50 characters",
+                id: "nonvoting",
+                type: "splitColumn",
+                rows: [
+                  {
+                    rowId: "row1",
+                    left: {
+                      id: "lootTokenName",
+                      type: "input",
+                      label: "Name",
+                      placeholder: "Token Name",
+                      rules: {
+                        maxLength: {
+                          value: 50,
+                          message:
+                            "Token name cannot be longer than 50 characters",
+                        },
+                      },
+                    },
+                    right: {
+                      id: "lootTokenSymbol",
+                      type: "input",
+                      label: "Symbol",
+                      placeholder: "nvTKN",
+                      rules: {
+                        maxLength: {
+                          value: 5,
+                          message:
+                            "Token symbol cannot be longer than 5 characters",
+                        },
+                      },
                     },
                   },
-                },
-                right: {
-                  id: "lootTokenSymbol",
-                  type: "input",
-                  label: "Non-Voting Token Symbol",
-                  placeholder: "nvTKN",
-                  rules: {
-                    maxLength: {
-                      value: 5,
-                      message:
-                        "Token symbol cannot be longer than 5 characters",
-                    },
-                  },
-                },
+                ],
               },
             ],
           },
@@ -144,17 +160,17 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
           lootTokenSymbol: true,
         },
       },
-      {
-        title: "Co-Summoners",
-        description:
-          "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
-        fields: [
-          {
-            type: "summonersField",
-            id: "members",
-          },
-        ],
-      },
+      // {
+      //   title: "Co-Summoners",
+      //   description:
+      //     "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
+      //   fields: [
+      //     {
+      //       type: "summonersField",
+      //       id: "members",
+      //     },
+      //   ],
+      // },
     ],
   },
 };

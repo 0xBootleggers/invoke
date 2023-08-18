@@ -22,7 +22,8 @@ export const grayDark = {
   step12: "hsl(0, 0%, 93.5%)",
 };
 
-export const invokeDarkBtn: ButtonTheme = {
+// export const invokeDarkBtn: ButtonTheme = {
+export const invokeDarkBtn = {
   solid: {
     text: grayDark.step12,
     bg: grayDark.step4,
@@ -94,9 +95,9 @@ export const invokeTheme: ThemeOverrides = {
   button: {
     primary: invokeDarkBtn,
     secondary: invokeDarkBtn,
-    success: successDarkBtn,
-    warning: warningDarkBtn,
-    danger: dangerDarkBtn,
+    success: invokeDarkBtn,
+    warning: invokeDarkBtn,
+    danger: invokeDarkBtn,
   },
   card: {
     bg: grayDark.step4,

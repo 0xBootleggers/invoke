@@ -41,12 +41,81 @@ const FaqHeader = styled.div`
   text-align: center;
 `;
 
+const Headlines = styled.div`
+  .layerOne {
+    margin-top: 3rem;
+    @media ${widthQuery.sm} {
+      margin-top: 5.15rem;
+    }
+  }
+  .layerTwo {
+    position: absolute;
+    top: 17rem;
+    margin-right: 2.75rem;
+    max-width: 1100px;
+    @media ${widthQuery.sm} {
+      top: 16.5rem;
+    }
+  }
+  .layerThree {
+    position: absolute;
+    top: 16rem;
+    margin-right: 2.75rem;
+    max-width: 1100px;
+    @media ${widthQuery.sm} {
+      top: 16rem;
+    }
+  }
+  .layerFour {
+    position: absolute;
+    top: 15rem;
+    margin-right: 2.75rem;
+    max-width: 1100px;
+    @media ${widthQuery.sm} {
+      top: 15.5rem;
+    }
+  }
+  .layerFive {
+    position: absolute;
+    top: 14rem;
+    margin-right: 2.75rem;
+    max-width: 1100px;
+    @media ${widthQuery.sm} {
+      top: 15rem;
+    }
+  }
+`;
+
 export const Home = () => {
   return (
     <SingleColumnLayout>
-      <BiggerH1>
-        A purpose-driven governance stack for your Arbitrum community.
-      </BiggerH1>
+      <Headlines>
+        <div className="layerOne">
+          <BiggerH1 color="#ffffff">
+            A purpose-driven governance stack for your Arbitrum community.
+          </BiggerH1>
+        </div>
+        <div className="layerTwo">
+          <BiggerH1 color="#FFF500">
+            A purpose-driven governance stack for your Arbitrum community.
+          </BiggerH1>
+        </div>
+        <div className="layerThree">
+          <BiggerH1 color="#05FF00">
+            A purpose-driven governance stack for your Arbitrum community.
+          </BiggerH1>
+        </div>
+        <div className="layerFour">
+          <BiggerH1 color="#0500FF">
+            A purpose-driven governance stack for your Arbitrum community.
+          </BiggerH1>
+        </div>
+        <div className="layerFive">
+          <BiggerH1 color="#f00">
+            A purpose-driven governance stack for your Arbitrum community.
+          </BiggerH1>
+        </div>
+      </Headlines>
       <ButtonLinks>
         <Button variant="outline">
           <RouterLinkButton to="/invoke">Create</RouterLinkButton>
