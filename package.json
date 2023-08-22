@@ -20,9 +20,11 @@
     "@daohaus/ui": "^0.2.0-alpha.6",
     "@daohaus/utils": "^0.2.0-alpha.6",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.4.3",
+    "react-use": "^17.4.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
