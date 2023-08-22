@@ -29,6 +29,7 @@ declare type FieldBase = Record<
 export declare type WizardFormLego = WizardFormLegoBase<FieldBase>;
 
 export type WizardFormStep<Lookup extends LookupType = LookupType> = {
+  id: string;
   title?: string;
   description?: string;
   fields: FieldLegoBase<Lookup>[];

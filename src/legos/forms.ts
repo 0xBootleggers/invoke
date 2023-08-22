@@ -44,6 +44,7 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
       "Please review these settings as they cannot be changed later. Governance settings will be configurable in Advanced Settings after summoning.",
     steps: [
       {
+        id: "stepOne",
         title: "Summon",
         description:
           "You are about to summon a Moloch DAO, an on-chain organization with a native token and voting mechanism. To get started, pick a name for your DAO.  ",
@@ -64,6 +65,7 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
         requiredFields: { daoName: true },
       },
       {
+        id: "stepTwo",
         title: "Token",
         description:
           "Choose the name for your voting and non-voting tokens. Your token is the identity of your DAO. The token created will be ERC20 compliant.",
@@ -160,17 +162,18 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
           lootTokenSymbol: true,
         },
       },
-      // {
-      //   title: "Co-Summoners",
-      //   description:
-      //     "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
-      //   fields: [
-      //     {
-      //       type: "summonersField",
-      //       id: "members",
-      //     },
-      //   ],
-      // },
+      {
+        id: "stepThree",
+        title: "Co-Summoners",
+        description:
+          "If a new co-summoner is added, you must specify their starting voting and non-voting token amounts.",
+        fields: [
+          {
+            type: "summonersField",
+            id: "members",
+          },
+        ],
+      },
     ],
   },
 };
