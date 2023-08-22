@@ -18,7 +18,6 @@ const BrandLink = styled(Link)`
 export const Brand = () => {
   return (
     <BrandLink to="/">
-      <img src={bootImg} />
       <H5>|nvÖke</H5>
     </BrandLink>
   );

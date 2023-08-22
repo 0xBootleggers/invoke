@@ -14,10 +14,16 @@ const ImageContainer = styled.div`
 export const HausAnimated = () => {
   return (
     <ImageContainer>
-      <img src={BootleggersJub} />
-      <div className="img-block">
+      <a
+        href="https://bootleggers.wtf/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={BootleggersJub} />
+      </a>
+      <a href="https://daohaus.club/" target="_blank" rel="noopener noreferrer">
         <img src={hausBlockAnimated} />
-      </div>
+      </a>
     </ImageContainer>
   );
 };
