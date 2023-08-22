@@ -32,7 +32,6 @@ type ConfirmationProps = {
   setCurrentStepIndex: Dispatch<SetStateAction<number>>;
   currentStepIndex: number;
   handleSubmit: () => any | Promise<any>;
-  submitButtonText?: string;
   isLoading: boolean;
   form: WizardFormLego;
   customConfirm?: React.ElementType;
@@ -43,12 +42,13 @@ export const Confirmation = ({
   setCurrentStepIndex,
   currentStepIndex,
   handleSubmit,
-  submitButtonText,
   isLoading = false,
   form,
   customConfirm,
 }: ConfirmationProps) => {
   const { submitDisabled } = useFormBuilder() || {};
+
+  const { confirmTitle, confirmDescription, submitButtonText } = form;
 
   const CustomConfirm = customConfirm as React.ElementType;
 
@@ -57,12 +57,12 @@ export const Confirmation = ({
       <>
         {
           <ConfirmTitle>
-            {form.confirmTitle && <H3>{form.confirmTitle}</H3>}
-            {!form.confirmTitle && <H3>Confirm</H3>}
+            {confirmTitle && <H3>{confirmTitle}</H3>}
+            {!confirmTitle && <H3>Confirm</H3>}
           </ConfirmTitle>
         }
-        {form.confirmDescription && <DataMd>{form.confirmDescription}</DataMd>}
-        {!form.confirmDescription && (
+        {confirmDescription && <DataMd>{confirmDescription}</DataMd>}
+        {!confirmDescription && (
           <DataMd>
             Look though the previous steps to review your inputs before
             submitting.

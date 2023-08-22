@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { DataMd, DataXs } from "@daohaus/ui";
+import { DataXs } from "@daohaus/ui";
 import { HausAnimated } from "./HausAnimated";
 
 const FooterContainer = styled.div`
@@ -16,7 +16,6 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <HausAnimated />
-      <DataXs>Built by Bootleggers on DAOHaus</DataXs>
     </FooterContainer>
   );
 };

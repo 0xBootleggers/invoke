@@ -29,7 +29,7 @@ export const Success = () => {
       <Confetti
         width={width}
         height={1300}
-        numberOfPieces={6000}
+        numberOfPieces={7000}
         initialVelocityX={6}
         colors={["#ffffff", "#FFF500", "#05FF00", "#0500FF", "#f00"]}
       />

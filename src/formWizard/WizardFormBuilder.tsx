@@ -50,7 +50,7 @@ export const WizardFormBuilder = ({
   const { chainId } = useDHConnect();
   const { fireTransaction } = useTxBuilder();
   const { defaultToast, errorToast, successToast } = useToast();
-  const { title, description, subtitle } = form;
+  const { title, description, subtitle, submitButtonText } = form;
 
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<null | StatusMsg>(null);

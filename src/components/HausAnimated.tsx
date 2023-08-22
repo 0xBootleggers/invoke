@@ -1,27 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import hausBlockAnimated from "../assets/DH_Logo_rainbow.svg";
+import BootleggersJub from "../assets/jug.svg";
 
 const ImageContainer = styled.div`
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20rem;
-  margin-bottom: 2rem;
-  .img-block {
-    display: flex;
-    height: 12rem;
-    width: 12rem;
-  }
-  img {
-    height: 12rem;
-    width: 12rem;
-  } */
+  gap: 3rem;
 `;
 
 export const HausAnimated = () => {
   return (
     <ImageContainer>
+      <img src={BootleggersJub} />
       <div className="img-block">
         <img src={hausBlockAnimated} />
       </div>
