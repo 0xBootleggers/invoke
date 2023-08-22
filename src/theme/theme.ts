@@ -22,7 +22,8 @@ export const grayDark = {
   step12: "hsl(0, 0%, 93.5%)",
 };
 
-export const invokeDarkBtn: ButtonTheme = {
+// export const invokeDarkBtn: ButtonTheme = {
+export const invokeDarkBtn = {
   solid: {
     text: grayDark.step12,
     bg: grayDark.step4,
@@ -94,9 +95,9 @@ export const invokeTheme: ThemeOverrides = {
   button: {
     primary: invokeDarkBtn,
     secondary: invokeDarkBtn,
-    success: successDarkBtn,
-    warning: warningDarkBtn,
-    danger: dangerDarkBtn,
+    success: invokeDarkBtn,
+    warning: invokeDarkBtn,
+    danger: invokeDarkBtn,
   },
   card: {
     bg: grayDark.step4,
@@ -111,34 +112,5 @@ export const invokeTheme: ThemeOverrides = {
       bg: grayDark.step4,
       border: grayDark.step4,
     },
-
-    // color: secondaryDark.step12,
-    // placeholder: secondaryDark.step11,
-    // hover: {
-    //   bg: secondaryDark.step4,
-    //   border: secondaryDark.step4,
-    // },
-    // focus: {
-    //   bg: secondaryDark.step3,
-    //   border: secondaryDark.step6,
-    // },
-    // disabled: {
-    //   bg: neutralDark.step5,
-    //   border: neutralDark.step5,
-    //   color: neutralDark.step10,
-    //   placeholder: neutralDark.step10,
-    // },
-    // success: {
-    //   border: successDark.step9,
-    // },
-    // warning: {
-    //   border: warningDark.step9,
-    // },
-    // error: {
-    //   border: dangerDark.step9,
-    // },
-    // icon: {
-    //   color: secondaryDark.step11,
-    // },
   },
 };

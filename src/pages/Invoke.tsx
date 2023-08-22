@@ -5,6 +5,7 @@ import { WizardFormBuilder } from "../formWizard";
 import { AppFieldLookup } from "../legos/fieldConfig";
 import { WIZARD_FORM } from "../legos/forms";
 import { InvokeContainer } from "../components/Layout";
+import { InvokeConfirmation } from "../components/InvokeConfirmation";
 
 export const Invoke = () => {
   const navigate = useNavigate();
@@ -28,9 +29,7 @@ export const Invoke = () => {
             onFormComplete(result);
           },
         }}
-        // customConfirm={() => {
-        //   return <p>confirm</p>;
-        // }}
+        customConfirm={InvokeConfirmation}
       />
     </InvokeContainer>
   );

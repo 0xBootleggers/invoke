@@ -27,6 +27,7 @@ export const TitleContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   font-weight: 900;
+  cursor: pointer;
 `;
 
 type CollapserProps = {
@@ -43,16 +44,16 @@ export const Collapser = ({ title, content }: CollapserProps) => {
 
   return (
     <CollapseContainer>
-      <TitleContainer>
+      <TitleContainer onClick={handleToggle}>
         {title && <DataMd> {title}</DataMd>}
 
         {open && (
-          <div onClick={handleToggle}>
+          <div>
             <StyledUpArrow />
           </div>
         )}
         {!open && (
-          <div onClick={handleToggle}>
+          <div>
             <StyledDownArrow />
           </div>
         )}

@@ -5,6 +5,8 @@ import { TXBuilder } from "@daohaus/tx-builder";
 import { H5, MainLayout, OuterLayout, widthQuery } from "@daohaus/ui";
 
 import { assembleSummonArgs } from "../utils/summonTx";
+import { Brand } from "./Brand";
+import { Footer } from "./Footer";
 
 const Header = styled.div`
   display: flex;
@@ -36,14 +38,14 @@ export const LayoutContainer = () => {
     >
       <OuterLayout>
         <Header>
-          <div className="left-nav">{<H5>Invoke</H5>}</div>
+          <div className="left-nav">{<Brand />}</div>
           <DaoHausNav />
         </Header>
 
         <MainLayout>
           <Outlet />
         </MainLayout>
-        {/* {footer here} */}
+        <Footer />
       </OuterLayout>
     </TXBuilder>
   );

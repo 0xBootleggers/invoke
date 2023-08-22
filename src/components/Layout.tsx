@@ -28,5 +28,5 @@ export const InvokeContainer = styled.div`
   padding: 2rem;
   border: 1px solid white;
   border-radius: 8px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
 `;

@@ -1,30 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
-import hausBlockAnimated from '../assets/hausBlockAnimated.svg';
+import React from "react";
+import styled from "styled-components";
+import hausBlockAnimated from "../assets/DH_Logo_rainbow.svg";
+import BootleggersJub from "../assets/jug.svg";
 
 const ImageContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20rem;
-  margin-bottom: 2rem;
-  .img-block {
-    display: flex;
-    height: 12rem;
-    width: 12rem;
-  }
-  img {
-    height: 12rem;
-    width: 12rem;
-  }
+  gap: 3rem;
 `;
 
 export const HausAnimated = () => {
   return (
     <ImageContainer>
-      <div className="img-block">
+      <a
+        href="https://bootleggers.wtf/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={BootleggersJub} />
+      </a>
+      <a href="https://daohaus.club/" target="_blank" rel="noopener noreferrer">
         <img src={hausBlockAnimated} />
-      </div>
+      </a>
     </ImageContainer>
   );
 };
