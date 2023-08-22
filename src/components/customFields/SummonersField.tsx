@@ -18,7 +18,7 @@ const RowWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 
   // TODO: handle mobile here w/ media query
