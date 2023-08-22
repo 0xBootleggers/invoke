@@ -31,6 +31,7 @@ export const Success = () => {
         height={1300}
         numberOfPieces={6000}
         initialVelocityX={6}
+        colors={["#ffffff", "#FFF500", "#05FF00", "#0500FF", "#f00"]}
       />
       <InvokeContainer>
         <H3 style={{ marginBottom: "3rem" }}>Your DAO is alive! 🎉</H3>
