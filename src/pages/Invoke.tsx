@@ -1,19 +1,14 @@
+import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { FormLayout } from "@daohaus/ui";
 
 import { WizardFormBuilder } from "../formWizard";
 import { AppFieldLookup } from "../legos/fieldConfig";
 import { WIZARD_FORM } from "../legos/forms";
+import { InvokeContainer } from "../components/Layout";
+import { InvokeConfirmation } from "../components/InvokeConfirmation";
 
 export const Invoke = () => {
   const navigate = useNavigate();
-  // new member fields
-
-  // refine other fields
-
-  // todo when moving to sdk
-  // //  cans some stuff be moved out of here and form builder?
-  // // // corefield lookup and/or field components?
 
   const onFormComplete = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,7 +19,7 @@ export const Invoke = () => {
   };
 
   return (
-    <>
+    <InvokeContainer>
       <WizardFormBuilder
         form={WIZARD_FORM.INVOKE}
         customFields={AppFieldLookup}
@@ -34,10 +29,8 @@ export const Invoke = () => {
             onFormComplete(result);
           },
         }}
-        // customConfirm={() => {
-        //   return <p>confirm</p>;
-        // }}
+        customConfirm={InvokeConfirmation}
       />
-    </>
+    </InvokeContainer>
   );
 };

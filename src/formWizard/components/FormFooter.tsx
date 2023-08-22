@@ -3,7 +3,7 @@ import { RiCheckLine, RiErrorWarningLine } from "react-icons/ri/index.js";
 
 import { ExplorerLink } from "@daohaus/connect";
 import { useFormBuilder } from "@daohaus/form-builder-base";
-import { border, Button, ParSm, Spinner, Theme } from "@daohaus/ui";
+import { Button, ParSm, Loading, Theme } from "@daohaus/ui";
 import { Dispatch, SetStateAction } from "react";
 
 enum StatusMsg {
@@ -108,14 +108,12 @@ const getStatusElement = (status: StatusMsg, theme: Theme) => {
     status === StatusMsg.NoContext
   ) {
     return <RiErrorWarningLine color={theme.danger.step9} size="2.25rem" />;
-  } else return <Spinner size="2.25rem" strokeWidth=".25rem" />;
+  } else return <Loading size={2.25} />;
 };
 
-const StatusBox = styled.div`
-  border-radius: ${border.radius};
-  border: 1px
-    ${({ theme, status }: { theme: Theme; status: StatusMsg }) =>
-      getStatusColor(status, theme)}
+const StatusBox = styled.div<{ status: StatusMsg }>`
+  border-radius: ${({ theme }) => theme["card"].radius};
+  border: 1px ${({ theme, status }) => getStatusColor(status, theme as Theme)}
     solid;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -124,8 +122,7 @@ const StatusBox = styled.div`
     justify-content: space-between;
     align-items: center;
     p {
-      color: ${({ theme, status }: { theme: Theme; status: StatusMsg }) =>
-        getStatusColor(status, theme)};
+      color: ${({ theme, status }) => getStatusColor(status, theme as Theme)};
       margin-right: auto;
     }
   }
@@ -137,7 +134,7 @@ const FormStatusDisplay = ({ status }: { status: StatusMsg }) => {
     <StatusBox status={status}>
       <div className="inner">
         <ParSm>{status}</ParSm>
-        {getStatusElement(status, theme)}
+        {getStatusElement(status, theme as Theme)}
       </div>
     </StatusBox>
   );

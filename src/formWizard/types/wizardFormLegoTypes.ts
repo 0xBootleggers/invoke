@@ -37,6 +37,7 @@ export declare type WizardFormLegoBase<Lookup extends LookupType = LookupType> =
     confirmTitle?: string;
     confirmDescription?: string;
     steps: {
+      id: string;
       title?: string;
       description?: string;
       fields: FieldLegoBase<Lookup>[];

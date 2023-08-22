@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
-import { Button, FormLayout, Link } from "@daohaus/ui";
+import { Button, DataSm, H3, Link } from "@daohaus/ui";
+import { InvokeContainer } from "../components/Layout";
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -12,48 +15,61 @@ const ButtonContainer = styled.div`
 const LinkButton = styled(Link)`
   text-decoration: none;
   color: unset;
-  :hover {
+  &:hover {
     text-decoration: none;
   }
 `;
 
 export const Success = () => {
+  const { width, height } = useWindowSize();
   const { daoId } = useParams();
 
   return (
-    <FormLayout
-      title="Your DAO is Live"
-      description="You have successfully summoned your DAO! So now you’re probably wondering what to do next."
-    >
-      <ButtonContainer>
-        <Button fullWidth>
-          <LinkButton
-            showExternalIcon={false}
-            href="https://docs.daohaus.club/"
-          >
-            View Docs
-          </LinkButton>
-        </Button>
-        <Button fullWidth>
-          <LinkButton
-            showExternalIcon={false}
-            href={`https://admin.daohaus.club/#/molochv3/${
-              import.meta.env.VITE_TARGET_CHAIN
-            }/${daoId}/settings`}
-          >
-            Advanced Settings
-          </LinkButton>
-        </Button>
-        <Button fullWidth>
-          <LinkButton
-            showExternalIcon={false}
-            href="https://admin.daohaus.club/"
-          >
-            Visit the Hub
-          </LinkButton>
-        </Button>
-      </ButtonContainer>
-    </FormLayout>
+    <>
+      <Confetti
+        width={width}
+        height={1300}
+        numberOfPieces={7000}
+        initialVelocityX={6}
+        colors={["#ffffff", "#FFF500", "#05FF00", "#0500FF", "#f00"]}
+      />
+      <InvokeContainer>
+        <H3 style={{ marginBottom: "3rem" }}>Your DAO is alive! 🎉</H3>
+        <DataSm style={{ marginBottom: "3rem" }}>
+          You have successfully summoned your DAO! So now you’re probably
+          wondering what to do next.
+        </DataSm>
+
+        <ButtonContainer>
+          <Button fullWidth>
+            <LinkButton
+              showExternalIcon={false}
+              href="https://docs.daohaus.club/"
+            >
+              View Docs
+            </LinkButton>
+          </Button>
+          <Button fullWidth>
+            <LinkButton
+              showExternalIcon={false}
+              href={`https://admin.daohaus.club/#/molochv3/${
+                import.meta.env.VITE_TARGET_CHAIN
+              }/${daoId}/settings`}
+            >
+              Advanced Settings
+            </LinkButton>
+          </Button>
+          <Button fullWidth>
+            <LinkButton
+              showExternalIcon={false}
+              href="https://admin.daohaus.club/"
+            >
+              Visit the Hub
+            </LinkButton>
+          </Button>
+        </ButtonContainer>
+      </InvokeContainer>
+    </>
   );
 };
 

@@ -2,11 +2,9 @@ import { Dispatch, SetStateAction } from "react";
 import { FieldValues } from "react-hook-form";
 import styled from "styled-components";
 
-import { Button, H3, ParLg, ParMd } from "@daohaus/ui";
+import { Button, DataMd, H3, ParLg } from "@daohaus/ui";
 import { useFormBuilder } from "@daohaus/form-builder-base";
-
 import { WizardFormLego } from "../types";
-import { Collapser } from "./Collapser";
 
 const ButtonRow = styled.div`
   display: flex;
@@ -25,100 +23,54 @@ const DataRow = styled.div`
   padding: 2rem 2rem 0 2rem;
 `;
 
-const ConfirmationSection = ({
-  step,
-  formValues,
-}: {
-  step: WizardFormLego["steps"][0];
-  formValues: FieldValues;
-}) => {
-  // TODO: handle non strings (array for members)
-  if (step.title === "Co-Summoners") {
-    return <p>implement for complex field types</p>;
-  }
-
-  return (
-    <>
-      {step.fields.map((field: WizardFormLego["steps"][0]["fields"][0]) => {
-        if (field.type === "checkRender") {
-          // TODO: implement
-          return null;
-        }
-
-        if (field.type === "splitColumn") {
-          return field.rows.map((row: any) => {
-            return (
-              <>
-                <DataRow key={row.left.id}>
-                  <ParLg>{row.left.label}</ParLg>
-                  <ParLg>{formValues[row.left.id]}</ParLg>
-                </DataRow>
-                <DataRow key={row.right.id}>
-                  <ParLg>{row.right.label}</ParLg>
-                  <ParLg>{formValues[row.right.id]}</ParLg>
-                </DataRow>
-              </>
-            );
-          });
-        }
-
-        return (
-          <DataRow key={field.id}>
-            <ParLg>{field.label}</ParLg>
-            <ParLg>{formValues[field.id]}</ParLg>
-          </DataRow>
-        );
-      })}
-    </>
-  );
-};
+const ConfirmTitle = styled.div`
+  margin-bottom: 3rem;
+`;
 
 type ConfirmationProps = {
-  customConfirm?: React.ElementType;
   formValues: FieldValues;
   setCurrentStepIndex: Dispatch<SetStateAction<number>>;
   currentStepIndex: number;
   handleSubmit: () => any | Promise<any>;
-  submitButtonText?: string;
   isLoading: boolean;
   form: WizardFormLego;
+  customConfirm?: React.ElementType;
 };
 
 export const Confirmation = ({
-  customConfirm,
   formValues,
   setCurrentStepIndex,
   currentStepIndex,
   handleSubmit,
-  submitButtonText,
   isLoading = false,
   form,
+  customConfirm,
 }: ConfirmationProps) => {
   const { submitDisabled } = useFormBuilder() || {};
+
+  const { confirmTitle, confirmDescription, submitButtonText } = form;
 
   const CustomConfirm = customConfirm as React.ElementType;
 
   return (
     <>
-      {customConfirm && <CustomConfirm formValues={formValues} />}
+      <>
+        {
+          <ConfirmTitle>
+            {confirmTitle && <H3>{confirmTitle}</H3>}
+            {!confirmTitle && <H3>Confirm</H3>}
+          </ConfirmTitle>
+        }
+        {confirmDescription && <DataMd>{confirmDescription}</DataMd>}
+        {!confirmDescription && (
+          <DataMd>
+            Look though the previous steps to review your inputs before
+            submitting.
+          </DataMd>
+        )}
+      </>
 
-      {!customConfirm && (
-        <>
-          {form.confirmTitle || <H3>Confirm</H3>}
-          {form.confirmDescription && <ParMd>{form.confirmDescription}</ParMd>}
-          {form.steps.map((step) => {
-            return (
-              <Collapser
-                title={step.title}
-                content={
-                  <ConfirmationSection step={step} formValues={formValues} />
-                }
-                key={step.title}
-              />
-            );
-          })}
-        </>
-      )}
+      {customConfirm && <CustomConfirm formValues={formValues} form={form} />}
 
       <ButtonRow>
         <Button

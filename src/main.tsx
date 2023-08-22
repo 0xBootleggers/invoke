@@ -10,6 +10,7 @@ import { HausThemeProvider } from "@daohaus/ui";
 import { Routes } from "./Routes";
 
 import "./App.css";
+import { invokeTheme } from "./theme/theme";
 
 // This solves an issue when using WalletConnect and intercept Txs to create dao proposals
 // Related open issue: https://github.com/WalletConnect/walletconnect-monorepo/issues/748
@@ -22,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <HashRouter>
       <QueryClientProvider client={queryClient}>
         <DHConnectProvider daoChainId={import.meta.env.VITE_TARGET_CHAIN}>
-          <HausThemeProvider>
+          <HausThemeProvider themeOverrides={invokeTheme}>
             <Routes />
           </HausThemeProvider>
         </DHConnectProvider>

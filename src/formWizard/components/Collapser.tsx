@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import styled from "styled-components";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri/index.js";
 
-import { Card, H5, Theme } from "@daohaus/ui";
+import { Card, DataMd } from "@daohaus/ui";
 
 export const CollapseContainer = styled(Card)`
   border: none;
@@ -13,19 +13,21 @@ export const CollapseContainer = styled(Card)`
 export const StyledUpArrow = styled(RiArrowUpSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: Theme }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.collapser.iconColor};
 `;
 
 export const StyledDownArrow = styled(RiArrowDownSLine)`
   font-size: 3rem;
   font-weight: 900;
-  color: ${({ theme }: { theme: Theme }) => theme.primary.step10};
+  color: ${({ theme }: { theme: any }) => theme.collapser.iconColor};
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 900;
+  cursor: pointer;
 `;
 
 type CollapserProps = {
@@ -42,16 +44,16 @@ export const Collapser = ({ title, content }: CollapserProps) => {
 
   return (
     <CollapseContainer>
-      <TitleContainer>
-        {title && <H5> {title}</H5>}
+      <TitleContainer onClick={handleToggle}>
+        {title && <DataMd> {title}</DataMd>}
 
         {open && (
-          <div onClick={handleToggle}>
+          <div>
             <StyledUpArrow />
           </div>
         )}
         {!open && (
-          <div onClick={handleToggle}>
+          <div>
             <StyledDownArrow />
           </div>
         )}
