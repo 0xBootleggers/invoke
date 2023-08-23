@@ -117,7 +117,7 @@ export const Home = () => {
         </div>
       </Headlines>
       <ButtonLinks>
-        <Button variant="outline">
+        <Button color="primary">
           <RouterLinkButton to="/invoke">Create</RouterLinkButton>
         </Button>
         <Button color="secondary">

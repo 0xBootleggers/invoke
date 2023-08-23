@@ -37,6 +37,10 @@ const RowWrapper = styled.div`
   }
 `;
 
+const CancelButton = styled(Button)`
+  margin-top: 3rem;
+`;
+
 export const SummonersField = (props: Buildable<Field>) => {
   const { unregister, getValues } = useFormContext();
 
@@ -104,15 +108,18 @@ export const SummonersField = (props: Buildable<Field>) => {
               placeholder="0"
             />
             {rows.length > 1 && (
-              <Button onClick={() => handleRemove(slotNumber)} variant="ghost">
+              <CancelButton
+                onClick={() => handleRemove(slotNumber)}
+                variant="ghost"
+              >
                 <RiCloseLine fontSize="3rem" />
-              </Button>
+              </CancelButton>
             )}
           </RowWrapper>
         );
       })}
       <div>
-        <Button onClick={handleAdd} variant="outline">
+        <Button onClick={handleAdd} color="secondary">
           Add
         </Button>
       </div>

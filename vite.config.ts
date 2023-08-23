@@ -13,6 +13,7 @@ export default ({ mode }) => {
         NX_INFURA_PROJECT_ID: process.env.VITE_INFURA_PROJECT_ID,
         NX_ETHERSCAN_KEY: process.env.VITE_ETHERSCAN_KEY,
         NX_WALLET_CONNECT_ID: process.env.VITE_WALLET_CONNECT_ID,
+        NX_ARBISCAN_KEY: process.env.VITE_ARBISCAN_KEY,
       },
     },
     optimizeDeps: {

@@ -8,6 +8,7 @@ export const CollapseContainer = styled(Card)`
   border: none;
   width: 100%;
   margin: 3rem 0;
+  background-color: ${({ theme }: { theme: any }) => theme.collapser.bg};
 `;
 
 export const StyledUpArrow = styled(RiArrowUpSLine)`

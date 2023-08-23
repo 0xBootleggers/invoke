@@ -1,10 +1,11 @@
 import {
-  ButtonTheme,
   ThemeOverrides,
   dangerDarkBtn,
+  defaultDarkTheme,
+  primaryDarkBtn,
+  secondaryDarkBtn,
   successDarkBtn,
   warningDarkBtn,
-  defaultDarkTheme,
 } from "@daohaus/ui";
 
 export const grayDark = {
@@ -22,49 +23,60 @@ export const grayDark = {
   step12: "hsl(0, 0%, 93.5%)",
 };
 
-// export const invokeDarkBtn: ButtonTheme = {
-export const invokeDarkBtn = {
+export const invokeMono = {
+  step1: "hsl(0, 0%, 100%)",
+  step2: "hsl(0, 0%, 66%)",
+  step3: "hsl(0, 0%, 22%)",
+  step4: "hsl(0, 0%, 0%)",
+  step5: "rgba(255, 0, 0, 0)",
+};
+
+export const invokePrimaryBtn = {
+  ...primaryDarkBtn,
   solid: {
-    text: grayDark.step12,
-    bg: grayDark.step4,
-    border: grayDark.step12,
-    bgHover: grayDark.step10,
-    borderHover: grayDark.step10,
-    bgFocus: grayDark.step9,
-    borderFocus: grayDark.step11,
-    bgDisabled: grayDark.step6,
-    borderDisabled: grayDark.step6,
-  },
-  outline: {
-    text: grayDark.step12,
-    border: grayDark.step12,
-    hover: grayDark.step10,
-    focus: grayDark.step11,
-    disabled: grayDark.step6,
+    text: invokeMono.step1,
+    bg: invokeMono.step5,
+    border: invokeMono.step1,
+    bgHover: invokeMono.step5,
+    borderHover: invokeMono.step2,
+    bgFocus: invokeMono.step2,
+    borderFocus: invokeMono.step1,
+    bgDisabled: invokeMono.step5,
+    borderDisabled: invokeMono.step3,
   },
   ghost: {
-    text: grayDark.step10,
-    bgHover: grayDark.step3,
-    borderFocus: grayDark.step4,
-    disabled: grayDark.step8,
+    text: invokeMono.step1,
+    bgHover: invokeMono.step4,
+    borderFocus: invokeMono.step4,
+    disabled: invokeMono.step4,
   },
-  link: {
-    text: grayDark.step9,
-    hover: grayDark.step10,
-    focus: grayDark.step11,
-    disabled: grayDark.step6,
+};
+
+export const invokeSecondaryBtn = {
+  ...secondaryDarkBtn,
+  solid: {
+    text: invokeMono.step1,
+    bg: invokeMono.step3,
+    border: invokeMono.step3,
+    bgHover: invokeMono.step2,
+    borderHover: invokeMono.step2,
+    bgFocus: invokeMono.step3,
+    borderFocus: invokeMono.step1,
+    bgDisabled: invokeMono.step3,
+    borderDisabled: invokeMono.step3,
   },
 };
 
 export const invokeTheme: ThemeOverrides = {
   themeName: "invoke",
   rootBgColor: "rgba(0,0,0,0.5)",
-  rootFontColor: grayDark.step12,
+  rootFontColor: invokeMono.step1,
   border: {
     radius: "1px",
   },
   collapser: {
-    iconColor: grayDark.step9,
+    iconColor: invokeMono.step2,
+    bg: invokeMono.step3,
   },
   font: {
     family: {
@@ -92,25 +104,35 @@ export const invokeTheme: ThemeOverrides = {
     lineHeight: "150%",
     letterSpacing: "1.5px",
   },
+  field: {
+    ...defaultDarkTheme.field,
+    radius: "4px",
+  },
   button: {
-    primary: invokeDarkBtn,
-    secondary: invokeDarkBtn,
-    success: invokeDarkBtn,
-    warning: invokeDarkBtn,
-    danger: invokeDarkBtn,
+    primary: invokePrimaryBtn,
+    secondary: invokeSecondaryBtn,
+    success: successDarkBtn,
+    warning: warningDarkBtn,
+    danger: dangerDarkBtn,
+    radius: "4px",
   },
   card: {
-    bg: grayDark.step4,
-    border: grayDark.step4,
-    radius: "0rem",
+    bg: invokeMono.step4,
+    border: invokeMono.step1,
+    radius: "8px",
   },
   input: {
     ...defaultDarkTheme.input,
-    border: grayDark.step3,
-    bg: grayDark.step3,
+    border: invokeMono.step3,
+    bg: invokeMono.step3,
+    color: invokeMono.step1,
     hover: {
-      bg: grayDark.step4,
-      border: grayDark.step4,
+      bg: invokeMono.step3,
+      border: invokeMono.step1,
+    },
+    focus: {
+      bg: invokeMono.step3,
+      border: invokeMono.step1,
     },
   },
 };

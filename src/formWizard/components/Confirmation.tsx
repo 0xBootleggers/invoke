@@ -14,15 +14,6 @@ const ButtonRow = styled.div`
   gap: 2rem;
 `;
 
-const DataRow = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2rem 2rem 0 2rem;
-`;
-
 const ConfirmTitle = styled.div`
   margin-bottom: 3rem;
 `;
@@ -76,10 +67,15 @@ export const Confirmation = ({
         <Button
           onClick={() => setCurrentStepIndex(currentStepIndex - 1)}
           disabled={submitDisabled || isLoading}
+          color="secondary"
         >
           Previous
         </Button>
-        <Button onClick={handleSubmit} disabled={submitDisabled || isLoading}>
+        <Button
+          onClick={handleSubmit}
+          disabled={submitDisabled || isLoading}
+          color="primary"
+        >
           {submitButtonText || "Deploy"}
         </Button>
       </ButtonRow>
