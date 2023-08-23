@@ -1,7 +1,5 @@
-import { styled } from "styled-components";
-
-import { DataXs } from "@daohaus/ui";
-import { HausAnimated } from "./HausAnimated";
+import { styled } from 'styled-components';
+import { HausAnimated } from './HausAnimated';
 
 const FooterContainer = styled.div`
   margin-top: 50rem;

@@ -1,17 +1,8 @@
-import {
-  Button,
-  H1,
-  H2,
-  H3,
-  H4,
-  Link,
-  SingleColumnLayout,
-  widthQuery,
-} from "@daohaus/ui";
-import { RouterLinkButton, UnstyledUiLink } from "../components/Layout";
-import styled from "styled-components";
-import { FaqContent } from "../utils/content";
-import { Collapser } from "../formWizard";
+import { Button, H1, H3, SingleColumnLayout, widthQuery } from '@daohaus/ui';
+import { RouterLinkButton, UnstyledUiLink } from '../components/Layout';
+import styled from 'styled-components';
+import { FaqContent } from '../utils/content';
+import { Collapser } from '../formWizard';
 
 const BiggerH1 = styled(H1)`
   font-size: 6.4rem;
@@ -25,7 +16,7 @@ const ButtonLinks = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 3em;
+  gap: 1em;
   width: 100%;
   margin-top: 6rem;
 `;
@@ -90,39 +81,39 @@ export const Home = () => {
   return (
     <SingleColumnLayout>
       <Headlines>
-        <div className="layerOne">
-          <BiggerH1 color="#ffffff">
+        <div className='layerOne'>
+          <BiggerH1 color='#ffffff'>
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className="layerTwo">
-          <BiggerH1 color="#FFF500">
+        <div className='layerTwo'>
+          <BiggerH1 color='#FFF500'>
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className="layerThree">
-          <BiggerH1 color="#05FF00">
+        <div className='layerThree'>
+          <BiggerH1 color='#05FF00'>
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className="layerFour">
-          <BiggerH1 color="#0500FF">
+        <div className='layerFour'>
+          <BiggerH1 color='#0500FF'>
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className="layerFive">
-          <BiggerH1 color="#f00">
+        <div className='layerFive'>
+          <BiggerH1 color='#f00'>
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
       </Headlines>
       <ButtonLinks>
-        <Button color="primary">
-          <RouterLinkButton to="/invoke">Create</RouterLinkButton>
+        <Button color='primary'>
+          <RouterLinkButton to='/invoke'>Create</RouterLinkButton>
         </Button>
-        <Button color="secondary">
+        <Button color='secondary'>
           <UnstyledUiLink
-            href="https://docs.daohaus.club/"
+            href='https://docs.daohaus.club/'
             showExternalIcon={false}
           >
             Docs
@@ -134,7 +125,7 @@ export const Home = () => {
         <FaqHeader>
           <H3>FAQs</H3>
         </FaqHeader>
-        {FaqContent.map((faq) => {
+        {FaqContent.map(faq => {
           return (
             <Collapser
               title={faq.title}

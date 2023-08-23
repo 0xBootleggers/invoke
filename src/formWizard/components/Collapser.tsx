@@ -1,13 +1,13 @@
-import { ReactNode, useState } from "react";
-import styled from "styled-components";
-import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri/index.js";
+import { ReactNode, useState } from 'react';
+import styled from 'styled-components';
+import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri/index.js';
 
-import { Card, DataMd } from "@daohaus/ui";
+import { Card, DataMd } from '@daohaus/ui';
 
 export const CollapseContainer = styled(Card)`
   border: none;
   width: 100%;
-  margin: 3rem 0;
+  margin: 1rem 0;
   background-color: ${({ theme }: { theme: any }) => theme.collapser.bg};
 `;
 
@@ -31,6 +31,10 @@ export const TitleContainer = styled.div`
   cursor: pointer;
 `;
 
+export const Content = styled.div`
+  margin-top: 1rem;
+`;
+
 type CollapserProps = {
   title?: string;
   content: ReactNode;
@@ -40,7 +44,7 @@ export const Collapser = ({ title, content }: CollapserProps) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleToggle = () => {
-    setOpen((prevState) => !prevState);
+    setOpen(prevState => !prevState);
   };
 
   return (
@@ -59,7 +63,7 @@ export const Collapser = ({ title, content }: CollapserProps) => {
           </div>
         )}
       </TitleContainer>
-      {open && <div>{content}</div>}
+      {open && <Content>{content}</Content>}
     </CollapseContainer>
   );
 };
