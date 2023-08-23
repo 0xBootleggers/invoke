@@ -31,6 +31,10 @@ export const TitleContainer = styled.div`
   cursor: pointer;
 `;
 
+export const Content = styled.div`
+  margin-top: 1rem;
+`;
+
 type CollapserProps = {
   title?: string;
   content: ReactNode;
@@ -59,7 +63,7 @@ export const Collapser = ({ title, content }: CollapserProps) => {
           </div>
         )}
       </TitleContainer>
-      {open && <div>{content}</div>}
+      {open && <Content>{content}</Content>}
     </CollapseContainer>
   );
 };

@@ -1,8 +1,8 @@
-import { DataSm, Link } from "@daohaus/ui";
+import { DataSm, Link } from '@daohaus/ui';
 
 export const FaqContent = [
   {
-    title: "What is a DAO?",
+    title: 'What is a DAO?',
     content: (
       <div>
         <DataSm>
@@ -19,7 +19,7 @@ export const FaqContent = [
     ),
   },
   {
-    title: "What is a Moloch DAO?",
+    title: 'What is a Moloch DAO?',
     content: (
       <div>
         <DataSm>
@@ -35,7 +35,7 @@ export const FaqContent = [
     ),
   },
   {
-    title: "How do Moloch DAOs compare to other DAO contracts?",
+    title: 'How does Moloch compare to other DAO contracts?',
     content: (
       <div>
         <DataSm>
@@ -51,7 +51,7 @@ export const FaqContent = [
     ),
   },
   {
-    title: "How do Moloch DAO member and loot tokens work?",
+    title: 'How do Moloch DAO member and loot tokens work?',
     content: (
       <div>
         <DataSm>
@@ -67,17 +67,17 @@ export const FaqContent = [
     ),
   },
   {
-    title: "How will forming a DAO empower my gaming community?",
+    title: 'Will forming a DAO empower my community?',
     content: (
       <div>
         <DataSm>
-          Ever dreamt of leading your gaming realm as a council of wise wizards?
-          DAOs are the spells you seek. With them, you can orchestrate on-chain
+          Ever dreamt of leading your realm as a council of wise wizards? DAOs
+          are the spells you seek. With them, you can orchestrate on-chain
           gaming realms, manage shared treasure chests, and chart the course of
           development by casting votes. Each adventurer could have a say in the
           vital decisions, like whether to invest in a rare, sparkling weapon or
-          commission a daring new quest. It’s like forming your gaming community
-          into a fantastical kingdom, sans the ogre raids and dragon fire.
+          commission a daring new quest. It’s like forming your community into a
+          fantastical kingdom, sans the ogre raids and dragon fire.
         </DataSm>
       </div>
     ),
