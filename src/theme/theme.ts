@@ -65,6 +65,9 @@ export const invokeSecondaryBtn = {
     bgDisabled: invokeMono.step3,
     borderDisabled: invokeMono.step3,
   },
+  outline: {
+    ...invokePrimaryBtn.solid,
+  },
 };
 
 export const invokeTheme: ThemeOverrides = {
@@ -81,6 +84,7 @@ export const invokeTheme: ThemeOverrides = {
   font: {
     family: {
       body: `'Major Mono Display', monospace`,
+      header: `'Major Mono Display', monospace`,
       data: `'Ubuntu Mono', monospace`,
     },
     size: {
