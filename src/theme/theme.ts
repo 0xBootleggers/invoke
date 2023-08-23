@@ -8,21 +8,6 @@ import {
   warningDarkBtn,
 } from "@daohaus/ui";
 
-export const grayDark = {
-  step1: "hsl(0, 0%, 9.5%)",
-  step2: "hsl(0, 0%, 10.5%)",
-  step3: "hsl(0, 0%, 15.8%)",
-  step4: "hsl(0, 0%, 18.9%)",
-  step5: "hsl(0, 0%, 21.7%)",
-  step6: "hsl(0, 0%, 24.7%)",
-  step7: "hsl(0, 0%, 29.1%)",
-  step8: "hsl(0, 0%, 37.5%)",
-  step9: "hsl(0, 0%, 43.0%)",
-  step10: "hsl(0, 0%, 50.7%)",
-  step11: "hsl(0, 0%, 69.5%)",
-  step12: "hsl(0, 0%, 93.5%)",
-};
-
 export const invokeMono = {
   step1: "hsl(0, 0%, 100%)",
   step2: "hsl(0, 0%, 66%)",
@@ -70,6 +55,12 @@ export const invokeSecondaryBtn = {
   },
 };
 
+const invokeFontFamily = {
+  body: `'Major Mono Display', monospace`,
+  header: `'Major Mono Display', monospace`,
+  data: `'Ubuntu Mono', monospace`,
+};
+
 export const invokeTheme: ThemeOverrides = {
   themeName: "invoke",
   rootBgColor: "rgba(0,0,0,0.5)",
@@ -82,11 +73,7 @@ export const invokeTheme: ThemeOverrides = {
     bg: invokeMono.step3,
   },
   font: {
-    family: {
-      body: `'Major Mono Display', monospace`,
-      header: `'Major Mono Display', monospace`,
-      data: `'Ubuntu Mono', monospace`,
-    },
+    family: invokeFontFamily,
     size: {
       xs: "1.2rem",
       sm: "1.4rem",
@@ -111,6 +98,8 @@ export const invokeTheme: ThemeOverrides = {
   field: {
     ...defaultDarkTheme.field,
     radius: "4px",
+    inputFont: invokeFontFamily.data,
+    labelFont: invokeFontFamily.header,
   },
   button: {
     primary: invokePrimaryBtn,

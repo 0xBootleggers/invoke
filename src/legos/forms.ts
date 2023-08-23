@@ -74,6 +74,7 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
             id: "votingSegment",
             type: "formSegment",
             title: "Voting Token",
+            showDivider: false,
             fields: [
               {
                 id: "voting",
@@ -116,6 +117,7 @@ export const WIZARD_FORM: Record<string, CustomWizardFormLego> = {
             id: "noVotingSegment",
             type: "formSegment",
             title: "Non-Voting Token",
+            showDivider: false,
             fields: [
               {
                 id: "nonvoting",
