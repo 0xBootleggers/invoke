@@ -60,7 +60,10 @@ export const FormFooter = ({
 
       <ButtonRow>
         {currentStepIndex > 0 && (
-          <Button onClick={() => setCurrentStepIndex(currentStepIndex - 1)}>
+          <Button
+            onClick={() => setCurrentStepIndex(currentStepIndex - 1)}
+            color="secondary"
+          >
             Previous
           </Button>
         )}
@@ -69,13 +72,14 @@ export const FormFooter = ({
           <Button
             onClick={() => setCurrentStepIndex(currentStepIndex + 1)}
             disabled={submitDisabled}
+            color="primary"
           >
             Next
           </Button>
         )}
 
         {currentStepIndex === stepCount - 1 && (
-          <Button type="submit" disabled={submitDisabled}>
+          <Button type="submit" disabled={submitDisabled} color="primary">
             Next
           </Button>
         )}
