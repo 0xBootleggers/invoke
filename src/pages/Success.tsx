@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { useParams } from "react-router-dom";
-import useWindowSize from "react-use/lib/useWindowSize";
-import Confetti from "react-confetti";
+import styled from 'styled-components';
+import { useParams } from 'react-router-dom';
+import useWindowSize from 'react-use/lib/useWindowSize';
+import Confetti from 'react-confetti';
 
-import { Button, DataSm, H3, Link } from "@daohaus/ui";
-import { InvokeContainer } from "../components/Layout";
+import { Button, DataSm, H3, Link } from '@daohaus/ui';
+import { InvokeContainer } from '../components/Layout';
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
 `;
 
 const LinkButton = styled(Link)`
@@ -21,7 +21,7 @@ const LinkButton = styled(Link)`
 `;
 
 export const Success = () => {
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
   const { daoId } = useParams();
 
   return (
@@ -29,42 +29,41 @@ export const Success = () => {
       <Confetti
         width={width}
         height={1300}
-        numberOfPieces={7000}
-        initialVelocityX={6}
-        colors={["#ffffff", "#FFF500", "#05FF00", "#0500FF", "#f00"]}
+        numberOfPieces={666}
+        initialVelocityX={9}
+        colors={['#ffffff', '#FFF500', '#05FF00', '#0500FF', '#f00']}
       />
       <InvokeContainer>
-        <H3 style={{ marginBottom: "3rem" }}>Your DAO is alive! 🎉</H3>
-        <DataSm style={{ marginBottom: "3rem" }}>
-          You have successfully summoned your DAO! So now you’re probably
-          wondering what to do next.
+        <H3 style={{ marginBottom: '3rem' }}>Hail the Spirits</H3>
+        <DataSm style={{ marginBottom: '3rem' }}>
+          You summoned your organization!
         </DataSm>
 
         <ButtonContainer>
           <Button fullWidth>
             <LinkButton
               showExternalIcon={false}
-              href="https://docs.daohaus.club/"
-            >
-              View Docs
-            </LinkButton>
-          </Button>
-          <Button fullWidth>
-            <LinkButton
-              showExternalIcon={false}
               href={`https://admin.daohaus.club/#/molochv3/${
                 import.meta.env.VITE_TARGET_CHAIN
-              }/${daoId}/settings`}
+              }/${daoId}/`}
             >
-              Advanced Settings
+              View DAO
             </LinkButton>
           </Button>
           <Button fullWidth>
             <LinkButton
               showExternalIcon={false}
-              href="https://admin.daohaus.club/"
+              href='https://docs.daohaus.club/'
             >
-              Visit the Hub
+              Read Docs
+            </LinkButton>
+          </Button>
+          <Button fullWidth>
+            <LinkButton
+              showExternalIcon={false}
+              href='https://bootleggers.wtf/'
+            >
+              Customize Interface
             </LinkButton>
           </Button>
         </ButtonContainer>
