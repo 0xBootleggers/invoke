@@ -109,7 +109,7 @@ export const Home = () => {
       </Headlines>
       <ButtonLinks>
         <Button color='primary'>
-          <RouterLinkButton to='/invoke'>Create</RouterLinkButton>
+          <RouterLinkButton to='/invoke'>Summon</RouterLinkButton>
         </Button>
         <Button color='secondary'>
           <UnstyledUiLink

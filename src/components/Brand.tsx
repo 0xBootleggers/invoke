@@ -7,7 +7,7 @@ import BootleggersJub from '../assets/jug.svg';
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.5rem;
 
   @media (max-width: 800px) {
     gap: 1rem;
