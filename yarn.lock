@@ -1229,10 +1229,10 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@daohaus/abis@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/abis/-/abis-0.2.0.tgz#45af4d59852df5f4a319a46089f5f94ffe637e7c"
-  integrity sha512-9rkCoLxo7eWd89KYJrW1lv5yxAyRX2zPDyvX7AHI1btEi/73/Nxu15De3UKwlUs9vTHT/UaVB+zlI0X52EGFlw==
+"@daohaus/abis@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/abis/-/abis-0.2.1.tgz#ba5f64789d921981b7cf2591c3978d0772669461"
+  integrity sha512-GOXb0sn4zhEZCaFJqfvToHwfg1vIwp+2pcIRKtZWFO7FsCy1gJWK+utBWPgx7e1HNREe6VRIrkLG4QWyXbn0dA==
 
 "@daohaus/baal-contracts@1.2.9":
   version "1.2.9"
@@ -1244,43 +1244,43 @@
     "@openzeppelin/hardhat-upgrades" "^1.21.0"
     hardhat-contract-sizer "^2.4.0"
 
-"@daohaus/connect-context@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/connect-context/-/connect-context-0.2.0.tgz#d27a02f462157dab8029a36fc6105dcf04ce72dd"
-  integrity sha512-/4YUktF437JJsk+qrNpvNjl/UP6R+z4jqVvfr/x0+LwkMMf5ss1AeBChyihiPWGtfLSkiwwEZ2ooxKgWg7yH6w==
+"@daohaus/connect-context@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/connect-context/-/connect-context-0.2.1.tgz#f2637316bc082f4f21942af68489dbde953a634b"
+  integrity sha512-KFwbRH8FBh4f/2gHaEW8zv4u6QREssUc/qwApjyCUXE7E7LttDSA2+iBRokv2H6bEiqb0HTcJvhzBENkk3Xx/w==
   dependencies:
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/profile-data" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/profile-data" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@wagmi/connectors" "2.7.0"
     "@web3modal/ethereum" "2.7.1"
     "@web3modal/react" "2.7.1"
     react "18.2.0"
     wagmi "1.3.10"
 
-"@daohaus/connect@0.2.0", "@daohaus/connect@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/connect/-/connect-0.2.0.tgz#3425241a5be04f68844cad5b8b583218f016058a"
-  integrity sha512-rsqe67TkLDYvNa1VwuIj9PWwhSmoz03gK80d9p0BYs1SR7L96zp4iwJnKWl5fsWFB35B/ILO9yi2VnagkpxFrg==
+"@daohaus/connect@0.2.1", "@daohaus/connect@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/connect/-/connect-0.2.1.tgz#5ad0950b35272a83b409307c870792b6f47b8472"
+  integrity sha512-mFpOUlq8sXYlBOuEnyojf+57hhEQGCRr3Ml2vpxpKX2h4LQ6dtMnizq+/d7wGNSkkUYH4q6kccFjwlkhrhAN+w==
   dependencies:
-    "@daohaus/connect-context" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/ui" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/connect-context" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/ui" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@radix-ui/colors" "0.1.9"
     react "18.2.0"
     react-icons "4.10.1"
     styled-components "6.0.7"
 
-"@daohaus/contract-utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/contract-utils/-/contract-utils-0.2.0.tgz#49d39635e5cb74aadcd401e71d9418036cd358a1"
-  integrity sha512-0gXhdvB4bwcgAG6xSxNnYariQ15mULdgZ5IdtA0mNFt3pJmnRjG4IvrF+iXvu3iJ8l+ye5ZzPw5nXGhTrsifug==
+"@daohaus/contract-utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/contract-utils/-/contract-utils-0.2.1.tgz#784a4876f85b82d211dedff3e9c4bc96c06a15dc"
+  integrity sha512-N09gQhujworiX0sQ7OHcNZXXtifjos2LLdDbqvA3nbCd9b7AYGl41jHvdYa3ImqOxPRx6N6+eBlWdn7FCiDD3Q==
   dependencies:
-    "@daohaus/abis" "0.2.0"
+    "@daohaus/abis" "0.2.1"
     "@daohaus/baal-contracts" "1.2.9"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     date-fns "2.30.0"
     ethers "5.7.2"
     localforage "1.10.0"
@@ -1291,12 +1291,12 @@
     viem "1.6.0"
     wagmi "1.3.10"
 
-"@daohaus/data-fetch-utils@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/data-fetch-utils/-/data-fetch-utils-0.2.0.tgz#aad7929d6447d2d05a962eea703b30231007f6ef"
-  integrity sha512-OwWPxNhP3JQXllcmMTMuba9u42XnS18uQ7kFFTEEokQxDkZHJbBxfzjyxAAeRQD/MxjAjj2YgCIxDulXMpO0Ww==
+"@daohaus/data-fetch-utils@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/data-fetch-utils/-/data-fetch-utils-0.2.1.tgz#18f468ac3d15c6b5390ecfcd8df0e04782d42706"
+  integrity sha512-sIHg9nvwRtWKfbcwyHEYcPDC99hMyG/xKdpc0lG474n6FQa1YwqOzlwZ9Pk7s0encgpB+rGNHzO2hJfARLpWGg==
   dependencies:
-    "@daohaus/keychain-utils" "0.2.0"
+    "@daohaus/keychain-utils" "0.2.1"
     "@graphql-typed-document-node/core" "3.2.0"
     cross-fetch "3.1.8"
     graphql "16.3.0"
@@ -1304,58 +1304,58 @@
     tslib "2.6.1"
     wagmi "1.3.10"
 
-"@daohaus/form-builder-base@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/form-builder-base/-/form-builder-base-0.2.0.tgz#0f2bc9c35dc0c968af6e6f48f6e3a9d3f78135c8"
-  integrity sha512-s7W39jFrcruu0AHrezE+pSd6YKtxHl/8VR7SgufB9/ekAb6rIjj73sV8AsI+A+2eS/utAjiIOpdOJ7VjiFuRiQ==
+"@daohaus/form-builder-base@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/form-builder-base/-/form-builder-base-0.2.1.tgz#c4ec544c3fedf56bc7a4c049d3ef19858575a92c"
+  integrity sha512-x/qlomGCphdSbe5thmuENXPbVodEkcpE2UmtCuZwXWLvHiefxGYltu8BaOyXDQJ/VDwGiGMc8O/MvjIi3rqehw==
   dependencies:
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/utils" "0.2.1"
     "@hookform/devtools" "4.3.1"
     react "18.2.0"
     react-hook-form "7.45.4"
     styled-components "6.0.7"
 
-"@daohaus/form-builder@0.2.0", "@daohaus/form-builder@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/form-builder/-/form-builder-0.2.0.tgz#ac0ab112ae0b473d38a832cd42abc7e5ddc5ed37"
-  integrity sha512-SOta3oppl/pgjD6p54QMfuzSWIQH0JSgqA5UWK1w6FS06GloCxl5MhuSSJlzy5ed2oW+7J/Mr1wjQWs507B/GA==
+"@daohaus/form-builder@0.2.1", "@daohaus/form-builder@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/form-builder/-/form-builder-0.2.1.tgz#0fed9ddec8fe7648f8bd76efe996cacaed4d6073"
+  integrity sha512-xqvld9VrzblLaCfODqGJRwSe2EudSn8JiKBTBfbs+9VNblwPjDI8imtY8pbFLW2dILKaJNkGGiP9H+HbZYA1Nw==
   dependencies:
-    "@daohaus/connect" "0.2.0"
-    "@daohaus/form-builder-base" "0.2.0"
-    "@daohaus/tx-builder" "0.2.0"
-    "@daohaus/ui" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/connect" "0.2.1"
+    "@daohaus/form-builder-base" "0.2.1"
+    "@daohaus/tx-builder" "0.2.1"
+    "@daohaus/ui" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     react "18.2.0"
     react-hook-form "7.45.4"
     react-icons "4.10.1"
     styled-components "6.0.7"
 
-"@daohaus/keychain-utils@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/keychain-utils/-/keychain-utils-0.2.0.tgz#6b841df640981fce4aa503da67bd585713df9dd6"
-  integrity sha512-fwnA7abrExtQuyTISZwmRM5njFjIIOSLKx/HIca6saIqy1aViI5AqVodtySZoB8xbzlGomWtey2QWSy30QKf2g==
+"@daohaus/keychain-utils@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/keychain-utils/-/keychain-utils-0.2.1.tgz#7c983a2278e78fc7961c06495deda091c88be9ef"
+  integrity sha512-l48sbLAdqtH2qZYQ+uC9ElMomsscvJ1WAcxzxunVxyig+H8S1AwzC2IPGXXtYbO6qD0YnZ7M/ekwyM+j9HMq5A==
   dependencies:
     tslib "2.6.1"
     wagmi "1.3.10"
 
-"@daohaus/moloch-v3-context@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-context/-/moloch-v3-context-0.2.0.tgz#8643a2ed4481f3ae990899bc006ddad7205f5eae"
-  integrity sha512-pkAUCE3JjOV/DpywmNspXXeL9lEX+xWU6VHdBYqTxYauVo1MS6C2uIG46XymUZ70fizRKOEw9eizoAC7jtMTzA==
+"@daohaus/moloch-v3-context@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-context/-/moloch-v3-context-0.2.1.tgz#8e0cda66159e757f30f2e737af4cd7648c490e6e"
+  integrity sha512-fxAyX3kw0FVw+hxfRxz0FM76UJwOej8KcqeLUY5tZQdZG9lxYrzYsKE3rQNgRt/vE2LRjcWLcqYHQZsxVycLeQ==
   dependencies:
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
     react "18.2.0"
 
-"@daohaus/moloch-v3-data@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-data/-/moloch-v3-data-0.2.0.tgz#e8d514d611a92124f81d600e24d5d6518081d02a"
-  integrity sha512-4jIHVT7PW++b4Mn/ZH7xImeV8XXbjhOuUrK3iTDL3U9qrkR3CxaE6nLkV6/rMZr2kR7AyRct+V55O2qb5W6Aew==
+"@daohaus/moloch-v3-data@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-data/-/moloch-v3-data-0.2.1.tgz#82282decc43007af20dc4e035dd39df72c314d8a"
+  integrity sha512-peCH7sA6ZrrccvBPGGAyiEopD9IAh8xvAKYuBB1JuLuV18mPSNgixZm6jg42eJTMgtjVA5ayl67UbiMcA7X4Nw==
   dependencies:
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@graphql-typed-document-node/core" "3.2.0"
     cross-fetch "3.1.8"
     date-fns "2.30.0"
@@ -1369,20 +1369,20 @@
     viem "1.6.0"
     wagmi "1.3.10"
 
-"@daohaus/moloch-v3-fields@0.2.0", "@daohaus/moloch-v3-fields@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-fields/-/moloch-v3-fields-0.2.0.tgz#648b084958dd41119d75848b1ff4b2ad0e655529"
-  integrity sha512-5vFdkdYCsujyXIw7ZGI8ECZJPBCXdHoBF6u1AoKrWfQdmZ6l774UimqwGxsuflFePqR5P/flfcmpHUqJz9VXlA==
+"@daohaus/moloch-v3-fields@0.2.1", "@daohaus/moloch-v3-fields@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-fields/-/moloch-v3-fields-0.2.1.tgz#1e9a605dc5c526015a3d58220c1514dbbfe1a224"
+  integrity sha512-r6rFlQwKuKwoH6fNAzOP9EOOB0xqYVADeM2Ued+QYEF6MFJBIvZ2ejJWVodldkdbrnjlQbSIFJ+EWiMu+Z5flA==
   dependencies:
-    "@daohaus/abis" "0.2.0"
-    "@daohaus/connect" "0.2.0"
-    "@daohaus/form-builder" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
-    "@daohaus/moloch-v3-hooks" "0.2.0"
-    "@daohaus/tx-builder" "0.2.0"
-    "@daohaus/ui" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/abis" "0.2.1"
+    "@daohaus/connect" "0.2.1"
+    "@daohaus/form-builder" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
+    "@daohaus/moloch-v3-hooks" "0.2.1"
+    "@daohaus/tx-builder" "0.2.1"
+    "@daohaus/ui" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@ethersproject/abi" "5.7.0"
     "@radix-ui/react-checkbox" "1.0.4"
     "@walletconnect/client" "1.8.0"
@@ -1399,40 +1399,40 @@
     uuid "9.0.0"
     viem "1.6.0"
 
-"@daohaus/moloch-v3-hooks@0.2.0", "@daohaus/moloch-v3-hooks@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-hooks/-/moloch-v3-hooks-0.2.0.tgz#ebbeed8b385eb7e2f1be91518f44ea097c7de44e"
-  integrity sha512-5BL5lLO8PXaWbUnJy06cDu4EK58sM1qCUMjUD8zCHcwLjtrFISlf4DJzi+0ZsvJ/ml0/m9lke6vFpz7I44fI/Q==
+"@daohaus/moloch-v3-hooks@0.2.1", "@daohaus/moloch-v3-hooks@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-hooks/-/moloch-v3-hooks-0.2.1.tgz#bd60fc56414f858606163d342b9303edf416bb43"
+  integrity sha512-X8PkzKqyeXSykrrWn5cr+KVs1WHOpYXVnCm4aRq0y8CzjB4U3vm5auor3FLP5NseQMBrXrHMoKzAB3mPxdeGdg==
   dependencies:
-    "@daohaus/abis" "0.2.0"
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-context" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
-    "@daohaus/profile-data" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/abis" "0.2.1"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-context" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
+    "@daohaus/profile-data" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     react "18.2.0"
 
-"@daohaus/moloch-v3-legos@0.2.0", "@daohaus/moloch-v3-legos@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-legos/-/moloch-v3-legos-0.2.0.tgz#4b0bfa7415d760fb22692e2f8b9b5ee79d5d100b"
-  integrity sha512-3Rgre0wyhoMSv0eyYixEb0IY2ADMBEUGVb1L+pRZlGfo+BdnvZaH9JuvNFtY9rEwtFHcJ1ByIURRUK5cWAEhsw==
+"@daohaus/moloch-v3-legos@0.2.1", "@daohaus/moloch-v3-legos@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-legos/-/moloch-v3-legos-0.2.1.tgz#873ef8db822df9aac616ee945c45353a6fecf855"
+  integrity sha512-ciiwy9mwmdAJ8ANxNohhsbK60kGV6WulCa2nXPG7wSfPqaJA8EWar293MuYuFOhTqtk/h7MbMXZTSl6Ja9h9VA==
   dependencies:
-    "@daohaus/abis" "0.2.0"
-    "@daohaus/connect" "0.2.0"
-    "@daohaus/connect-context" "0.2.0"
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/form-builder" "0.2.0"
-    "@daohaus/form-builder-base" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-context" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
-    "@daohaus/moloch-v3-fields" "0.2.0"
-    "@daohaus/moloch-v3-hooks" "0.2.0"
-    "@daohaus/profile-data" "0.2.0"
-    "@daohaus/tx-builder" "0.2.0"
-    "@daohaus/ui" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/abis" "0.2.1"
+    "@daohaus/connect" "0.2.1"
+    "@daohaus/connect-context" "0.2.1"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/form-builder" "0.2.1"
+    "@daohaus/form-builder-base" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-context" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
+    "@daohaus/moloch-v3-fields" "0.2.1"
+    "@daohaus/moloch-v3-hooks" "0.2.1"
+    "@daohaus/profile-data" "0.2.1"
+    "@daohaus/tx-builder" "0.2.1"
+    "@daohaus/ui" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@ethersproject/abi" "5.7.0"
     "@gnosis.pm/safe-contracts" "1.3.0"
     "@graphql-typed-document-node/core" "3.2.0"
@@ -1481,37 +1481,37 @@
     viem "1.6.0"
     wagmi "1.3.10"
 
-"@daohaus/moloch-v3-macro-ui@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-macro-ui/-/moloch-v3-macro-ui-0.2.0.tgz#6282b33e6c9f8074bfc36ecfd6056a4aceedd865"
-  integrity sha512-ufouShZLsD22J0EvxUJVpw2OMyOFv9LBFegkl3j+TJiTVqxrYp0OW8pBeudJ3zeCImuLZAqHUsFUikrs+9m98Q==
+"@daohaus/moloch-v3-macro-ui@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-macro-ui/-/moloch-v3-macro-ui-0.2.1.tgz#b6d9a9c2d6dba293ae8aeb34f07589958ba6c5ec"
+  integrity sha512-LDFqg1Rqsjdk0EEsCzCFSBhh62GucrPrur/oV25H9hpCHAM9aBpjYlHKg6KwGZpYpchMOsdwtlQaHAkSxvEtUQ==
   dependencies:
-    "@daohaus/abis" "0.2.0"
-    "@daohaus/connect" "0.2.0"
-    "@daohaus/form-builder" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-context" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
-    "@daohaus/moloch-v3-fields" "0.2.0"
-    "@daohaus/moloch-v3-hooks" "0.2.0"
-    "@daohaus/moloch-v3-legos" "0.2.0"
-    "@daohaus/tx-builder" "0.2.0"
-    "@daohaus/ui" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/abis" "0.2.1"
+    "@daohaus/connect" "0.2.1"
+    "@daohaus/form-builder" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-context" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
+    "@daohaus/moloch-v3-fields" "0.2.1"
+    "@daohaus/moloch-v3-hooks" "0.2.1"
+    "@daohaus/moloch-v3-legos" "0.2.1"
+    "@daohaus/tx-builder" "0.2.1"
+    "@daohaus/ui" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@radix-ui/colors" "0.1.9"
     react "18.2.0"
     react-icons "4.10.1"
     react-table "7.8.0"
     styled-components "6.0.7"
 
-"@daohaus/profile-data@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/profile-data/-/profile-data-0.2.0.tgz#88e4c93d9330db8958cd535dd7d4615a486711d8"
-  integrity sha512-ThMy++ID2+ioqu5NBDelJAghfa2ND/7gIgY7R2kf6aZowYeB0TotVjr4xGzNG4U6cE26YK2Tun8KDPiWgp0bEA==
+"@daohaus/profile-data@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/profile-data/-/profile-data-0.2.1.tgz#022ff522453084c58502e5815b135200c79853f6"
+  integrity sha512-hC4IxkgW0hFHc1KDX3WbO76iXcOWrScdvH052S6s92tsUv6NJSF2C40vISftQV8QO5KBtZv3q3RBSZFF7XeWSw==
   dependencies:
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@graphql-typed-document-node/core" "3.2.0"
     cross-fetch "3.1.8"
     date-fns "2.30.0"
@@ -1525,16 +1525,16 @@
     viem "1.6.0"
     wagmi "1.3.10"
 
-"@daohaus/tx-builder@0.2.0", "@daohaus/tx-builder@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/tx-builder/-/tx-builder-0.2.0.tgz#b5cdb270bfb4ddd7beeac77f04a222b2ddf59304"
-  integrity sha512-Gx2d4rAeXN+jrM7G0jOuUV5+WG2hiXjhTNoS5cksp7EfFsYzbkgw0vjiUJBYkXJi85WjUWkX24bo3MyDhHTEvw==
+"@daohaus/tx-builder@0.2.1", "@daohaus/tx-builder@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/tx-builder/-/tx-builder-0.2.1.tgz#bcf0a1c6eba36e3afbe457c7ec76686099fc455c"
+  integrity sha512-3loxcksQmf5uYmnLaky1HhqsTFHcFunZcxq5UQfdh1/jT7Kjcoc9Vqr24J+pKzK9wO1oP+0aOygvGZXXeeQdFw==
   dependencies:
-    "@daohaus/abis" "0.2.0"
-    "@daohaus/data-fetch-utils" "0.2.0"
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/moloch-v3-data" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/abis" "0.2.1"
+    "@daohaus/data-fetch-utils" "0.2.1"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/moloch-v3-data" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@gnosis.pm/safe-contracts" "1.3.0"
     "@wagmi/core" "1.3.9"
     ethers "5.7.2"
@@ -1543,13 +1543,13 @@
     viem "1.6.0"
     wagmi "1.3.10"
 
-"@daohaus/ui@0.2.0", "@daohaus/ui@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/ui/-/ui-0.2.0.tgz#1e66b2afced6b647e0bf58c0817146c95eaf53ce"
-  integrity sha512-Wiic6qc7JmJFt/GtO6JBtNC5wgH2XvKNuopc7CbDXuUMONzpxAtyhXEs6z8mfm3hyCZsQmOeSiqusNtNLiXmHA==
+"@daohaus/ui@0.2.1", "@daohaus/ui@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/ui/-/ui-0.2.1.tgz#aaa76a518320b7b8d441a8ee13f159f83bdab045"
+  integrity sha512-gGDP48MseSWBgkHBE1zadpqAj/IrGdtpTNDMAjSqI/v3mw/8PMYmwIZAm9cWwoGemkWKjpufzZvG+UgG0DfZBQ==
   dependencies:
-    "@daohaus/keychain-utils" "0.2.0"
-    "@daohaus/utils" "0.2.0"
+    "@daohaus/keychain-utils" "0.2.1"
+    "@daohaus/utils" "0.2.1"
     "@radix-ui/colors" "0.1.9"
     "@radix-ui/react-accessible-icon" "1.0.3"
     "@radix-ui/react-avatar" "1.0.3"
@@ -1573,12 +1573,12 @@
     rollup-plugin-sourcemaps "0.6.3"
     styled-components "6.0.7"
 
-"@daohaus/utils@0.2.0", "@daohaus/utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@daohaus/utils/-/utils-0.2.0.tgz#a1f2c6f7ac44b965004529dea25a6be16836d0fa"
-  integrity sha512-91lfnKhPp7DUkJCTM8uJN2WXkUC9FwIBi3BE9TzqdG2c8Snp2TnHyfmZbfcGmawi3hzgAvn8HVcWt54Hf+d4Mw==
+"@daohaus/utils@0.2.1", "@daohaus/utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@daohaus/utils/-/utils-0.2.1.tgz#073a8dba3f67acccc66aa592157da698b4ad101b"
+  integrity sha512-ctYJ4nfuSyP0HUIQpEbqapf5LlSV+RjJNERb/E39rjKBypZ6tGVZdZAcMokt5PNGiZsbu2DH7Zb6yIeI045cdg==
   dependencies:
-    "@daohaus/keychain-utils" "0.2.0"
+    "@daohaus/keychain-utils" "0.2.1"
     date-fns "2.30.0"
     localforage "1.10.0"
     numbro "2.3.6"
