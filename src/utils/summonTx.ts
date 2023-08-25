@@ -22,29 +22,6 @@ type summonerFieldSet = Record<string, string>;
 const assembleMembersData = (
   formValues: Record<string, unknown>
 ): Record<string, unknown> => {
-  // const byIds = Object.keys(formValues).reduce(
-  //   (acc: Record<string, summonerFieldSet>, val: string) => {
-  //     const keyParts = val.split("-");
-  //     if (keyParts[0] === SUMMONER_FIELD_PREFIX) {
-  //       const field = keyParts[1];
-  //       const uuid = keyParts[2];
-  //       if (acc[uuid]) {
-  //         acc[uuid][field] = formValues[val] as string;
-  //       } else {
-  //         acc[uuid] = {
-  //           [SUMMONER_FIELD_MEMBER]: "",
-  //           [SUMMONER_FIELD_SHARES]: "",
-  //           [SUMMONER_FIELD_LOOT]: "",
-  //         };
-
-  //         acc[uuid][field] = formValues[val] as string;
-  //       }
-  //     }
-  //     return acc;
-  //   },
-  //   {}
-  // );
-
   const membersObj = formValues.members as Record<string, summonerFieldSet>;
 
   const members = Object.keys(membersObj).reduce(
