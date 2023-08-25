@@ -167,7 +167,7 @@ export const invokeTheme: ThemeOverrides = {
     },
   },
   toast: {
-    ...defaultDarkTheme.dropdown,
+    ...defaultDarkTheme.toast,
     bg: invokeMono.step3,
     border: invokeMono.step5,
     success: {
