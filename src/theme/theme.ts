@@ -6,14 +6,14 @@ import {
   secondaryDarkBtn,
   successDarkBtn,
   warningDarkBtn,
-} from "@daohaus/ui";
+} from '@daohaus/ui';
 
 export const invokeMono = {
-  step1: "hsl(0, 0%, 100%)",
-  step2: "hsl(0, 0%, 66%)",
-  step3: "hsl(0, 0%, 22%)",
-  step4: "hsl(0, 0%, 0%)",
-  step5: "rgba(255, 0, 0, 0)",
+  step1: 'hsl(0, 0%, 100%)',
+  step2: 'hsl(0, 0%, 66%)',
+  step3: 'hsl(0, 0%, 22%)',
+  step4: 'hsl(0, 0%, 0%)',
+  step5: 'rgba(255, 0, 0, 0)',
 };
 
 export const invokePrimaryBtn = {
@@ -62,11 +62,11 @@ const invokeFontFamily = {
 };
 
 export const invokeTheme: ThemeOverrides = {
-  themeName: "invoke",
-  rootBgColor: "rgba(0,0,0,0.5)",
+  themeName: 'invoke',
+  rootBgColor: 'rgba(0,0,0,0.5)',
   rootFontColor: invokeMono.step1,
   border: {
-    radius: "1px",
+    radius: '1px',
   },
   collapser: {
     iconColor: invokeMono.step2,
@@ -75,14 +75,14 @@ export const invokeTheme: ThemeOverrides = {
   font: {
     family: invokeFontFamily,
     size: {
-      xs: "1.2rem",
-      sm: "1.4rem",
-      md: "1.6rem",
-      lg: "2rem",
-      xl: "2.4rem",
-      xxl: "3.2rem",
-      xxxl: "4rem",
-      xxxxl: "4.8rem",
+      xs: '1.2rem',
+      sm: '1.4rem',
+      md: '1.6rem',
+      lg: '2rem',
+      xl: '2.4rem',
+      xxl: '3.2rem',
+      xxxl: '4rem',
+      xxxxl: '4.8rem',
     },
     weight: {
       extraLight: 200,
@@ -92,12 +92,12 @@ export const invokeTheme: ThemeOverrides = {
       bold: 700,
       black: 900,
     },
-    lineHeight: "150%",
-    letterSpacing: "1.5px",
+    lineHeight: '150%',
+    letterSpacing: '1.5px',
   },
   field: {
     ...defaultDarkTheme.field,
-    radius: "4px",
+    radius: '4px',
     inputFont: invokeFontFamily.data,
     labelFont: invokeFontFamily.header,
   },
@@ -107,12 +107,12 @@ export const invokeTheme: ThemeOverrides = {
     success: successDarkBtn,
     warning: warningDarkBtn,
     danger: dangerDarkBtn,
-    radius: "4px",
+    radius: '4px',
   },
   card: {
     bg: invokeMono.step4,
     border: invokeMono.step1,
-    radius: "8px",
+    radius: '8px',
   },
   input: {
     ...defaultDarkTheme.input,
@@ -128,4 +128,19 @@ export const invokeTheme: ThemeOverrides = {
       border: invokeMono.step1,
     },
   },
+  // dropdown: {
+  //   content: {
+  //     primary: {
+  //       bg: invokeMono.step3,
+  //     },
+  //   },
+  // },
+  // toast: {
+  //   bg: invokeMono.step3,
+  //   border: invokeMono.step5,
+  //   success: {
+  //     bg: invokeMono.step3,
+  //     border: invokeMono.step5,
+  //   },
+  // },
 };
