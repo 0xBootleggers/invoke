@@ -29,8 +29,8 @@ export const Success = () => {
       <Confetti
         width={width}
         height={1300}
-        numberOfPieces={666}
-        initialVelocityX={9}
+        numberOfPieces={100}
+        initialVelocityX={6}
         colors={['#ffffff', '#FFF500', '#05FF00', '#0500FF', '#f00']}
       />
       <InvokeContainer>
@@ -40,7 +40,7 @@ export const Success = () => {
         </DataSm>
 
         <ButtonContainer>
-          <Button fullWidth>
+          <Button color='secondary' fullWidth>
             <LinkButton
               showExternalIcon={false}
               href={`https://admin.daohaus.club/#/molochv3/${
@@ -50,7 +50,7 @@ export const Success = () => {
               View DAO
             </LinkButton>
           </Button>
-          <Button fullWidth>
+          <Button color='secondary' fullWidth>
             <LinkButton
               showExternalIcon={false}
               href='https://docs.daohaus.club/'
@@ -58,7 +58,7 @@ export const Success = () => {
               Read Docs
             </LinkButton>
           </Button>
-          <Button fullWidth>
+          <Button color='secondary' fullWidth>
             <LinkButton
               showExternalIcon={false}
               href='https://bootleggers.wtf/'
