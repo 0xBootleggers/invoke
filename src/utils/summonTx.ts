@@ -1,18 +1,18 @@
-import { ArbitraryState } from "@daohaus/utils";
-import { ValidNetwork } from "@daohaus/keychain-utils";
-import { assembleTxArgs } from "@daohaus/contract-utils";
+import { ArbitraryState } from '@daohaus/utils';
+import { ValidNetwork } from '@daohaus/keychain-utils';
+import { assembleTxArgs } from '@daohaus/contract-utils';
 
-export const SUMMONER_FIELD_MEMBER = "memberAddresses";
-export const SUMMONER_FIELD_SHARES = "memberShares";
-export const SUMMONER_FIELD_LOOT = "memberLoot";
+export const SUMMONER_FIELD_MEMBER = 'memberAddresses';
+export const SUMMONER_FIELD_SHARES = 'memberShares';
+export const SUMMONER_FIELD_LOOT = 'memberLoot';
 
 const DEFAULT_ARGS = {
-  votingPeriodInSeconds: "120",
-  gracePeriodInSeconds: "60",
-  newOffering: "0",
-  quorum: "0",
-  sponsorThreshold: "1000000000000000000",
-  minRetention: "66",
+  votingPeriodInSeconds: '10800',
+  gracePeriodInSeconds: '7200',
+  newOffering: '0',
+  quorum: '0',
+  sponsorThreshold: '1000000000000000000',
+  minRetention: '66',
   votingTransferable: false,
   nvTransferable: false,
 };
@@ -71,8 +71,8 @@ const assembleMembersData = (
     }
   );
 
-  console.log("summoner membersObj", membersObj);
-  console.log("summoners", members);
+  console.log('summoner membersObj', membersObj);
+  console.log('summoners', members);
 
   return members;
 };
@@ -88,7 +88,7 @@ export const assembleSummonArgs = (args: ArbitraryState) => {
     chainId
   );
 
-  console.log("txArgs", txArgs);
+  console.log('txArgs', txArgs);
 
   return txArgs;
 };
