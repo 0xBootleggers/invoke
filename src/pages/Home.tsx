@@ -81,39 +81,39 @@ export const Home = () => {
   return (
     <SingleColumnLayout>
       <Headlines>
-        <div className='layerOne'>
-          <BiggerH1 color='#ffffff'>
+        <div className="layerOne">
+          <BiggerH1 color="#ffffff">
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className='layerTwo'>
-          <BiggerH1 color='#FFF500'>
+        <div className="layerTwo">
+          <BiggerH1 color="#FFF500">
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className='layerThree'>
-          <BiggerH1 color='#05FF00'>
+        <div className="layerThree">
+          <BiggerH1 color="#05FF00">
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className='layerFour'>
-          <BiggerH1 color='#0500FF'>
+        <div className="layerFour">
+          <BiggerH1 color="#0500FF">
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
-        <div className='layerFive'>
-          <BiggerH1 color='#f00'>
+        <div className="layerFive">
+          <BiggerH1 color="#f00">
             A purpose-driven governance stack for your Arbitrum community.
           </BiggerH1>
         </div>
       </Headlines>
       <ButtonLinks>
-        <Button color='primary'>
-          <RouterLinkButton to='/invoke'>Summon</RouterLinkButton>
+        <Button color="primary">
+          <RouterLinkButton to="/invoke">Summon</RouterLinkButton>
         </Button>
-        <Button color='secondary'>
+        <Button color="secondary">
           <UnstyledUiLink
-            href='https://docs.daohaus.club/'
+            href="https://guide.daohaus.club/summoner/how-to-summon-a-dao"
             showExternalIcon={false}
           >
             Docs
